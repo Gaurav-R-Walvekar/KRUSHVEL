@@ -290,6 +290,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FOUNDER SECTION */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="inline-block px-4 py-1.5 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-full text-sm font-medium mb-4">Meet Our Founder</div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Leadership</h2>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <ScrollReveal variant="fadeRight">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl"></div>
+                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-2" style={{ maxHeight: '500px', overflow: 'hidden' }}>
+                  <img 
+                    src="/images/Akshay.jpeg" 
+                    alt="Akshay Amol Gulunjkar, Founder of Krushvel Global Exim" 
+                    className="w-full h-full rounded-xl object-cover"
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="fadeLeft">
+              <div className="text-white">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">Akshay Amol Gulunjkar</h3>
+                <p className="text-cyan-400 font-medium mb-6">Founder, Krushvel Global Exim</p>
+                <blockquote className="text-slate-300 leading-relaxed mb-6">
+                  "At Krushvel Global Exim, we believe that the strength of an infrastructure project lies in the reliability of its smallest components."
+                </blockquote>
+                <blockquote className="text-slate-300 leading-relaxed mb-6">
+                  "Based in Pune, we supply the global mining and construction industries with heavy-duty parts that never fail. From precision screens to durable rollers, our products showcase the best of Indian manufacturing."
+                </blockquote>
+                <blockquote className="text-slate-300 leading-relaxed mb-6">
+                  "We don't just sell parts; we provide the reliability our partners need to build faster and better. Our promise is simple: top quality, honest trade, and a partnership you can trust."
+                </blockquote>
+                <p className="text-cyan-400 font-medium">— Akshay Amol Gulunjkar, Founder, Krushvel Global Exim</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* BESTSELLER PRODUCTS - Vertical Scroll Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -322,13 +366,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-5">
-                    <h3 className="font-bold text-slate-800 text-lg mb-2">{product.name}</h3>
-                    <p className="text-slate-600 text-sm mb-4">{product.description.substring(0, 120)}...</p>
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {product.specs?.slice(0, 3).map((spec, j) => (
-                        <span key={j} className="px-2 py-1 bg-cyan-50 text-cyan-700 text-xs rounded-lg">{spec}</span>
-                      ))}
-                    </div>
+                    <h3 className="font-bold text-slate-800 text-lg mb-4">{product.name}</h3>
                     <Link
                       to="/contact"
                       className="w-full btn-primary text-sm justify-center"
@@ -351,53 +389,6 @@ export default function Home() {
               </Link>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* PRODUCT CATEGORIES */}
-      <section className="py-20 bg-gradient-to-br from-blue-950 to-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/images/3. Conveyor Rollers.png" alt="" className="w-full h-full object-cover opacity-10" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <div className="inline-block px-4 py-1.5 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-full text-sm font-medium mb-4">Product Categories</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Export Product Range</h2>
-              <p className="text-slate-400 max-w-2xl mx-auto">Complete range of industrial parts and equipment for crushing, conveying, screening and material handling industries.</p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {productCategories.map((cat, i) => (
-              <ScrollReveal key={cat.id} delay={i * 0.1} variant="scaleUp">
-                <motion.div
-                  whileHover={{ y: -6, scale: 1.02 }}
-                  className="glass-card-dark p-1 group cursor-pointer"
-                >
-                  <Link to={cat.slug}>
-                    <div className="overflow-hidden rounded-xl">
-                      <img
-                        src={cat.image}
-                        alt={cat.name}
-                        className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-5">
-                      <h3 className="font-bold text-white mb-2">{cat.name}</h3>
-                      <p className="text-slate-400 text-sm mb-4">{cat.description.substring(0, 80)}...</p>
-                      <span className="inline-flex items-center gap-1 text-cyan-400 text-sm font-medium group-hover:gap-2 transition-all">
-                        Explore Products
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              </ScrollReveal>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -672,7 +663,7 @@ export default function Home() {
                       <span className="text-slate-400 text-xs">{post.date}</span>
                     </div>
                     <h3 className="font-bold text-slate-800 mb-2 group-hover:text-cyan-600 transition-colors">{post.title}</h3>
-                    <p className="text-slate-600 text-sm">{post.excerpt.substring(0, 100)}...</p>
+                    <p className="text-slate-600 text-sm">{post.excerpt}</p>
                   </div>
                 </motion.div>
               </ScrollReveal>
