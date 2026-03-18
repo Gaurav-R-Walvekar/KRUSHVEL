@@ -41,7 +41,7 @@ export default function Navbar() {
       <nav className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src="/images/KRUSHVEL_icon.jpg" alt="Krushvel Logo" className="h-10 w-10 rounded-full border-2 border-cyan-400 object-cover" />
+          <img src="/images/KRUSHVEL_icon.jpg" alt="Krushvel Logo" className="h-14 w-14 rounded-full border-2 border-cyan-400 object-cover" />
           <div>
             <div className="flex items-center gap-2">
               <span className={`text-xl font-bold block ${scrolled ? 'text-slate-800' : 'text-white'}`}>KRUSHVEL</span>
