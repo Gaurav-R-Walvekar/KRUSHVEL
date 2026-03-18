@@ -44,7 +44,7 @@ export default function Navbar() {
           <img src="/images/KRUSHVEL_icon.jpg" alt="Krushvel Logo" className="h-10 w-10 rounded-full border-2 border-cyan-400 object-cover" />
           <div>
             <span className={`text-xl font-bold block ${scrolled ? 'text-slate-800' : 'text-white'}`}>KRUSHVEL</span>
-            <span className={`text-xs block ${scrolled ? 'text-cyan-600' : 'text-cyan-200'}`}>Industrial Parts Exporter</span>
+            <span className={`text-xs block ${scrolled ? 'text-cyan-600' : 'text-cyan-200'}`}>GLOBAL EXIM</span>
           </div>
         </Link>
 
