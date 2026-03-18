@@ -43,7 +43,10 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3">
           <img src="/images/KRUSHVEL_icon.jpg" alt="Krushvel Logo" className="h-10 w-10 rounded-full border-2 border-cyan-400 object-cover" />
           <div>
-            <span className={`text-xl font-bold block ${scrolled ? 'text-slate-800' : 'text-white'}`}>KRUSHVEL</span>
+            <div className="flex items-center gap-2">
+              <span className={`text-xl font-bold block ${scrolled ? 'text-slate-800' : 'text-white'}`}>KRUSHVEL</span>
+              <img src="/images/Flag_of_India.svg" alt="India" className="h-5 w-auto" title="India" />
+            </div>
             <span className={`text-xs block ${scrolled ? 'text-cyan-600' : 'text-cyan-200'}`}>GLOBAL EXIM</span>
           </div>
         </Link>
