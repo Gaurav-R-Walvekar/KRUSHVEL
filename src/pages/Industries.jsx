@@ -18,7 +18,7 @@ const industries = [
     id: 'cement',
     icon: '🏭',
     title: 'Cement Plants',
-    image: '/images/CONVEYOR IDLER ROLLERS & FRAME 2.jpeg',
+    image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME_2.jpeg',
     desc: 'Specialized crusher and conveyor components for cement manufacturing facilities and limestone processing plants.',
     details: 'Cement plants require reliable crusher spare parts and conveyor systems for continuous limestone crushing and material transport. We supply heavy-duty components designed for the dusty and demanding cement production environment.',
     products: ['Crusher Spare Parts', 'Conveyor Idler Rollers', 'Conveyor Belts', 'Drum Rollers', 'Industrial Gearbox', 'Industrial Motors'],

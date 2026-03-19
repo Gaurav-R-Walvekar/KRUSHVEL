@@ -13,7 +13,7 @@ const heroSlides = [
     desc: 'Trusted supplier of crusher spare parts, conveyor rollers & industrial equipment to global buyers.',
   },
   {
-    image: '/images/CONVEYOR IDLER ROLLERS & FRAME 2.jpeg',
+    image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME_2.jpeg',
     title: 'Conveyor System Components',
     subtitle: 'Built for Demanding Industries',
     desc: 'Premium quality idler rollers, impact rollers, drum rollers & conveyor belts for mining & cement plants.',
@@ -148,7 +148,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm mb-6"
             >
               <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-              Trusted Global Exporter from India
+              Trusted Global Exporter from <span className="text-orange-400">India</span>
             </motion.div>
 
             <AnimatePresence mode="wait">
@@ -160,8 +160,7 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-                  Industrial Equipment & Crusher Parts{' '}
-                  <span className="text-cyan-400">Exporter from India</span>
+                  {heroSlides[currentSlide].title}
                 </h1>
                 <p className="text-xl text-slate-300 mb-3">{heroSlides[currentSlide].subtitle}</p>
                 <p className="text-slate-400 text-lg mb-8 max-w-xl">{heroSlides[currentSlide].desc}</p>
@@ -284,50 +283,6 @@ export default function Home() {
                   <h3 className="font-semibold text-slate-800 mb-1">1000+ Products</h3>
                   <p className="text-sm text-slate-600">Industrial parts across 4 major categories</p>
                 </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* FOUNDER SECTION */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <div className="inline-block px-4 py-1.5 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-full text-sm font-medium mb-4">Meet Our Founder</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Leadership</h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-            <ScrollReveal variant="fadeRight">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl"></div>
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-2" style={{ maxHeight: '500px', overflow: 'hidden' }}>
-                  <img 
-                    src="/images/Akshay.jpeg" 
-                    alt="Akshay Amol Gulunjkar, Founder of Krushvel Global Exim" 
-                    className="w-full h-full rounded-xl object-cover"
-                  />
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal variant="fadeLeft">
-              <div className="text-white">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">Akshay Amol Gulunjkar</h3>
-                <p className="text-cyan-400 font-medium mb-6">Founder, Krushvel Global Exim</p>
-                <blockquote className="text-slate-300 leading-relaxed mb-6">
-                  "At Krushvel Global Exim, we believe that the strength of an infrastructure project lies in the reliability of its smallest components."
-                </blockquote>
-                <blockquote className="text-slate-300 leading-relaxed mb-6">
-                  "Based in Pune, we supply the global mining and construction industries with heavy-duty parts that never fail. From precision screens to durable rollers, our products showcase the best of Indian manufacturing."
-                </blockquote>
-                <blockquote className="text-slate-300 leading-relaxed mb-6">
-                  "We don't just sell parts; we provide the reliability our partners need to build faster and better. Our promise is simple: top quality, honest trade, and a partnership you can trust."
-                </blockquote>
-                <p className="text-cyan-400 font-medium">— Akshay Amol Gulunjkar, Founder, Krushvel Global Exim</p>
               </div>
             </ScrollReveal>
           </div>
@@ -642,7 +597,7 @@ export default function Home() {
                 excerpt: 'Proper selection of conveyor idler rollers ensures longer belt life, reduced power consumption, and lower maintenance costs.',
                 date: 'February 2024',
                 category: 'Industry Guide',
-                image: '/images/CONVEYOR IDLER ROLLERS & FRAME 2.jpeg',
+                image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME_2.jpeg',
               },
               {
                 title: 'Importing Industrial Parts from India: What Buyers Need to Know',

@@ -115,7 +115,7 @@ export const allProducts = [
     category: 'conveyor-components',
     description: 'Complete conveyor idler roller sets with frame for bulk material handling. Best-selling product for mining and cement plants.',
     image: '/images/CONVEYOR IDLER ROLLERS & FRAME.jpeg',
-    images: ['/images/CONVEYOR IDLER ROLLERS & FRAME.jpeg', '/images/CONVEYOR IDLER ROLLERS & FRAME 2.jpeg', '/images/CONVEYOR IDLER ROLLERS & FRAME 3.jpeg', '/images/CONVEYOR IDLER ROLLERS & FRAME 4.jpeg'],
+    images: ['/images/CONVEYOR IDLER ROLLERS & FRAME.jpeg', '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME_2.jpeg', '/images/CONVEYOR IDLER ROLLERS & FRAME 3.jpeg', '/images/CONVEYOR IDLER ROLLERS & FRAME 4.jpeg'],
     bestseller: true,
     keywords: 'conveyor idler roller exporter India, idler roller set supplier',
     specs: ['Dia 89mm to 219mm', 'Length 150mm to 2400mm', 'CEMA Standard', 'Mild Steel / Rubber Coated'],
