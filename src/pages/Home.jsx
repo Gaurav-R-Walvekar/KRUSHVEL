@@ -19,7 +19,7 @@ const heroSlides = [
     desc: 'Premium quality idler rollers, impact rollers, drum rollers & conveyor belts for mining & cement plants.',
   },
   {
-    image: '/images/Wiremesh Screens.png',
+    image: '/images/StoneCrusherPlan.jpg',
     title: 'Wiremesh Screens & Vibrating Equipment',
     subtitle: 'Precision Engineered Products',
     desc: 'High-quality vibrating screen machines, wiremesh screens & screen bearing housings for global export.',
@@ -649,7 +649,7 @@ export default function Home() {
                 excerpt: 'A comprehensive guide to importing industrial parts from India, covering documentation, customs clearance, and quality verification.',
                 date: 'January 2024',
                 category: 'Export Guide',
-                image: '/images/3. Conveyor Rollers.png',
+                image: '/images/ConveyorRollers.jpeg',
               },
             ].map((post, i) => (
               <ScrollReveal key={i} delay={i * 0.1} variant="fadeUp">
