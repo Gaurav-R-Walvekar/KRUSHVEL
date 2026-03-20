@@ -123,6 +123,37 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  // Reset to English on page load/refresh
+  useEffect(() => {
+    const resetToEnglish = () => {
+      // Clear Google Translate cookies and force reload
+      const cookies = document.cookie.split(';')
+      for (let cookie of cookies) {
+        if (cookie.includes('googtrans') || cookie.includes('googTe')) {
+          document.cookie = cookie.split('=')[0] + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+        }
+      }
+      
+      // Remove any existing translation
+      const select = document.querySelector('.goog-te-combo')
+      if (select) {
+        select.value = 'en'
+        select.dispatchEvent(new Event('change', { bubbles: true }))
+      }
+      setSelectedLanguage(languages[0])
+    }
+    
+    // Wait for Google Translate to load, then reset
+    const timer = setTimeout(() => {
+      resetToEnglish()
+    }, 1000)
+    
+    // Also try immediately in case Google Translate is already loaded
+    resetToEnglish()
+    
+    return () => clearTimeout(timer)
+  }, [])
+
   const handleLanguageSelect = (lang) => {
     setSelectedLanguage(lang)
     setLanguageOpen(false)
@@ -148,33 +179,35 @@ export default function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           />
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2">
+              <motion.span 
+                className={`text-xl font-bold block ${scrolled ? 'text-slate-800' : 'text-white'}`}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1, duration: 0.4 }}
+              >
+                KRUSHVEL
+              </motion.span>
+              <motion.img 
+                src="/images/Flag_of_India.png" 
+                alt="India" 
+                className="h-5 w-5" 
+                title="India"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.3 }}
+              />
+            </div>
             <motion.span 
-              className={`text-xl font-bold block ${scrolled ? 'text-slate-800' : 'text-white'}`}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.1, duration: 0.4 }}
+              className={`text-xs block ${scrolled ? 'text-cyan-600' : 'text-cyan-200'}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.3 }}
             >
-              KRUSHVEL
+              GLOBAL EXIM
             </motion.span>
-            <motion.img 
-              src="/images/Flag_of_India.png" 
-              alt="India" 
-              className="h-5 w-5" 
-              title="India"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.3 }}
-            />
           </div>
-          <motion.span 
-            className={`text-xs block ${scrolled ? 'text-cyan-600' : 'text-cyan-200'}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.3 }}
-          >
-            GLOBAL EXIM
-          </motion.span>
         </Link>
 
         {/* Desktop Nav */}
