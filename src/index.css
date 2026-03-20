@@ -87,3 +87,59 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #0891b2, #1d4ed8);
 }
+
+/* Hide Google Translate popup/notification */
+.goog-te-banner-frame,
+.skiptranslate + iframe,
+.goog-te-banner-framework,
+.goog-te-balloon-frame,
+.goog-te-popup,
+.goog-te-popup-border,
+.goog-te-balloon,
+#goog-gt-tt,
+.goog-te-balloon-magic-css {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  top: -9999px !important;
+}
+
+/* Prevent body from being shifted */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Hide the "Translate" notification that appears at top */
+body > .skiptranslate,
+.goog-text-highlight {
+  display: none !important;
+}
+
+/* Ensure body doesn't have top padding from Google Translate */
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+/* Hide Google Translate select dropdown wrapper */
+.goog-te-gadget,
+.goog-te-gadget-simple {
+  display: none !important;
+}
+
+/* Alternative method - hide entire translate container */
+#google_translate_element,
+.goog-te-combo {
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
