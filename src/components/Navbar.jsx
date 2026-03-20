@@ -154,15 +154,21 @@ export default function Navbar() {
     return () => clearTimeout(timer)
   }, [])
 
-  const handleLanguageSelect = (lang) => {
+  const handleLanguageSelect = (lang, isMobile = false) => {
     setSelectedLanguage(lang)
-    setLanguageOpen(false)
     
     // Trigger Google Translate
     const select = document.querySelector('.goog-te-combo')
     if (select) {
       select.value = lang.code
       select.dispatchEvent(new Event('change', { bubbles: true }))
+    }
+    
+    // Close dropdown after a small delay to ensure translation triggers
+    if (isMobile) {
+      setTimeout(() => setLanguageOpen(false), 300)
+    } else {
+      setLanguageOpen(false)
     }
   }
 
@@ -376,7 +382,7 @@ export default function Navbar() {
           {/* Mobile Language Button */}
           <motion.button
             onClick={() => setLanguageOpen(!languageOpen)}
-            className={`p-2 rounded-lg transition-all duration-200 ${
+            className={`p-2 rounded-lg transition-all duration-200 flex items-center gap-2 ${
               scrolled 
                 ? 'text-slate-700 hover:bg-slate-100' 
                 : 'text-white hover:bg-white/10'
@@ -385,6 +391,7 @@ export default function Navbar() {
             aria-label="Select language"
           >
             <span className="text-lg">{selectedLanguage.flag}</span>
+            <span className="text-xs font-medium hidden sm:inline">{selectedLanguage.code.toUpperCase()}</span>
           </motion.button>
           
           <button
@@ -418,7 +425,7 @@ export default function Navbar() {
                 {languages.map((lang) => (
                   <motion.button
                     key={lang.code}
-                    onClick={() => handleLanguageSelect(lang)}
+                    onClick={() => handleLanguageSelect(lang, true)}
                     className={`p-3 rounded-lg flex flex-col items-center gap-1 transition-all duration-150 ${
                       selectedLanguage.code === lang.code
                         ? 'bg-cyan-50 border-2 border-cyan-500'
