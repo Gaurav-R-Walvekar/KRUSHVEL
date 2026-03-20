@@ -19,7 +19,7 @@ export default function Products() {
       {/* Hero */}
       <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-cyan-900 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/CONVEYOR IDLER ROLLERS & FRAME 3.jpeg" alt="" className="w-full h-full object-cover opacity-15" />
+          <img src="/images/CONVEYOR_IDLER_ROLLERS_&_FRAME3.jpeg" alt="" className="w-full h-full object-cover opacity-15" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
@@ -44,41 +44,9 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* All Products Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Product Categories</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">Explore our comprehensive range of industrial parts across four major categories.</p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {productCategories.map((cat, i) => (
-              <ScrollReveal key={cat.id} delay={i * 0.1} variant="scaleUp">
-                <motion.div whileHover={{ y: -8 }} className="glass-card-light overflow-hidden group">
-                  <Link to={cat.slug}>
-                    <div className="overflow-hidden h-44">
-                      <img src={cat.image} alt={cat.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    <div className="p-5">
-                      <h3 className="font-bold text-slate-800 text-lg mb-2">{cat.name}</h3>
-                      <p className="text-slate-600 text-sm mb-4">{cat.description.substring(0, 90)}...</p>
-                      <span className="inline-flex items-center gap-1.5 text-cyan-600 text-sm font-medium group-hover:gap-3 transition-all">
-                        View Products
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* All Products Grid */}
           <ScrollReveal>
             <div className="text-center mb-10">
               <h2 className="text-2xl font-bold text-slate-800 mb-2">All Export Products</h2>
@@ -109,7 +77,7 @@ export default function Products() {
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold text-slate-800 mb-2">{product.name}</h3>
-                    <p className="text-slate-600 text-xs mb-3">{product.description.substring(0, 80)}...</p>
+                    <p className="text-slate-600 text-xs mb-3">{product.description}</p>
                     <div className="flex flex-wrap gap-1 mb-3">
                       {product.specs?.slice(0, 2).map((spec, j) => (
                         <span key={j} className="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded">{spec}</span>

@@ -32,7 +32,7 @@ export default function About() {
       {/* Hero */}
       <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-800 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/3. Conveyor Rollers.png" alt="" className="w-full h-full object-cover opacity-10" />
+          <img src="/images/Conveyor_Rollers2.png" alt="" className="w-full h-full object-cover opacity-10" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>

@@ -49,7 +49,7 @@ export default function Certifications() {
               </div>
             </ScrollReveal>
             <ScrollReveal variant="fadeRight">
-              <img src="/images/VIBRATING SCREEN 1.jpeg" alt="Quality inspection" className="rounded-2xl shadow-xl w-full h-80 object-cover" />
+              <img src="/images/VIBRATING_SCREEN_1.jpeg" alt="Quality inspection" className="rounded-2xl shadow-xl w-full h-80 object-cover" />
             </ScrollReveal>
           </div>
 

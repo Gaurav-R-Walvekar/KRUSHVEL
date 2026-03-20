@@ -5,16 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  {
-    label: 'Products',
-    to: '/products',
-    children: [
-      { label: 'Crusher Spare Parts', to: '/products/crusher-spare-parts' },
-      { label: 'Conveyor Components', to: '/products/conveyor-components' },
-      { label: 'Vibrating Screen', to: '/products/vibrating-screen' },
-      { label: 'Industrial Components', to: '/products/industrial-components' },
-    ]
-  },
+  { label: 'Products', to: '/products' },
   { label: 'Services', to: '/services' },
   { label: 'Industries', to: '/industries' },
   { label: 'Contact', to: '/contact' },
@@ -40,58 +31,18 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-cyan-100/50 py-2' : 'bg-transparent py-4'}`}>
       <nav className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <AnimatePresence mode="wait">
-              {!scrolled ? (
-                <motion.div
-            key="logo-default"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-                >
-            <img 
-              src="/images/KRUSHVEL_icon.jpg" 
-              alt="Krushvel Logo" 
-              className="h-14 w-14 rounded-full border-2 border-cyan-400 object-cover" 
-            />
-                </motion.div>
-              ) : (
-                <motion.div
-            key="logo-scrolled"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1.3, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="origin-left"
-                >
-            <img 
-              src="/images/KRUSHVEL_icon.jpg" 
-              alt="Krushvel Logo" 
-              className="h-12 w-60 border-cyan-400 object-cover" 
-            />
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <AnimatePresence mode="wait">
-              {!scrolled && (
-                <motion.div
-            key="text-logo"
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: 'auto' }}
-            exit={{ opacity: 0, width: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-                >
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold block text-white">KRUSHVEL</span>
-              <img src="/images/Flag_of_India.svg" alt="India" className="h-5 w-5" title="India" />
-            </div>
-            <span className="text-xs block text-cyan-200">GLOBAL EXIM</span>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </Link>
+        <Link to="/" className="flex items-center gap-3">
+          <img 
+            src="/images/KRUSHVEL_icon.jpg" 
+            alt="Krushvel Logo" 
+            className="h-12 w-12 rounded-full border-2 border-cyan-400 object-cover" 
+          />
+          <div className="flex items-center gap-2">
+            <span className={`text-xl font-bold block ${scrolled ? 'text-slate-800' : 'text-white'}`}>KRUSHVEL</span>
+            <img src="/images/Flag_of_India.png" alt="India" className="h-5 w-5" title="India" />
+          </div>
+          <span className={`text-xs block ${scrolled ? 'text-cyan-600' : 'text-cyan-200'}`}>GLOBAL EXIM</span>
+        </Link>
 
           {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-1">

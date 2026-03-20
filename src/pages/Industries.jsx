@@ -8,7 +8,7 @@ const industries = [
     id: 'mining',
     icon: '⛏️',
     title: 'Mining Industry',
-    image: '/images/JAW PLATES 2.jpeg',
+    image: '/images/JAW_PLATES2.jpeg',
     desc: 'We supply comprehensive mining equipment spare parts for open-cast and underground mining operations worldwide.',
     details: 'The mining industry demands the toughest crusher and conveyor components. We supply jaw plates, toggle plates, crusher bearings, conveyor idler rollers, impact rollers, and vibrating screen equipment specifically designed for the harsh conditions of mining operations.',
     products: ['Jaw Plates & Cheek Plates', 'Crusher Bearings', 'Toggle Plates', 'Conveyor Idler Rollers', 'Vibrating Screen Machine', 'Wiremesh Screens'],
@@ -18,7 +18,7 @@ const industries = [
     id: 'cement',
     icon: '🏭',
     title: 'Cement Plants',
-    image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME_2.jpeg',
+    image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME2.jpeg',
     desc: 'Specialized crusher and conveyor components for cement manufacturing facilities and limestone processing plants.',
     details: 'Cement plants require reliable crusher spare parts and conveyor systems for continuous limestone crushing and material transport. We supply heavy-duty components designed for the dusty and demanding cement production environment.',
     products: ['Crusher Spare Parts', 'Conveyor Idler Rollers', 'Conveyor Belts', 'Drum Rollers', 'Industrial Gearbox', 'Industrial Motors'],
@@ -38,7 +38,7 @@ const industries = [
     id: 'quarry',
     icon: '🪨',
     title: 'Quarry Operations',
-    image: '/images/HEAVY SPRINGS 1.jpeg',
+    image: '/images/HEAVY_SPRINGS1.jpeg',
     desc: 'Quarry crusher components supplier for stone quarrying operations with complete range of wear parts.',
     details: 'Quarry operations require frequently replaced wear parts. As a dedicated quarry crusher components supplier, we maintain stock of the most commonly used jaw plates, cheek plates, toggle plates, and Screen media for fast delivery.',
     products: ['Jaw Plates', 'Cheek Plates', 'Toggle Plates', 'Heavy Springs', 'Crusher Bolts', 'Screen Panels'],
@@ -48,7 +48,7 @@ const industries = [
     id: 'material-handling',
     icon: '🔄',
     title: 'Material Handling',
-    image: '/images/ConveyorRollers.jpeg',
+    image: '/images/Conveyor_Rollers2.png',
     desc: 'Complete material handling solutions including conveyor systems, idler rollers, and bulk handling equipment.',
     details: 'Material handling facilities need reliable conveyor components for continuous operation. We supply complete conveyor roller sets, impact rollers, drum pulleys, conveyor belts, and accessories for bulk material handling operations.',
     products: ['Conveyor Idler Rollers', 'Impact Rollers', 'Drum Rollers', 'Conveyor Belts', 'Guide Rollers', 'Rubber U-Bidding'],
@@ -69,7 +69,7 @@ export default function Industries() {
       {/* Hero */}
       <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-slate-900 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/VIBRATING SCREEN 2.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
+          <img src="/images/VIBRATING_SCREEN_2.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>

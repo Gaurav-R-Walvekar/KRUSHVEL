@@ -55,7 +55,7 @@ export default function Services() {
       {/* Hero */}
       <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-teal-900 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/CONVEYOR BELT.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
+          <img src="/images/CONVEYOR_BELT.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>

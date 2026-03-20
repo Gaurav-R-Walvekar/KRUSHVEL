@@ -7,13 +7,13 @@ import { getBestsellers, productCategories } from '../data/products'
 
 const heroSlides = [
   {
-    image: '/images/Vibrating Screen.png',
+    image: '/images/Vibrating_Screen.png',
     title: 'Industrial Equipment & Crusher Parts',
     subtitle: 'Exporter from India',
     desc: 'Trusted supplier of crusher spare parts, conveyor rollers & industrial equipment to global buyers.',
   },
   {
-    image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME_2.jpeg',
+    image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME2.jpeg',
     title: 'Conveyor System Components',
     subtitle: 'Built for Demanding Industries',
     desc: 'Premium quality idler rollers, impact rollers, drum rollers & conveyor belts for mining & cement plants.',
@@ -485,7 +485,7 @@ export default function Home() {
             <ScrollReveal variant="fadeRight">
               <div className="relative">
                 <img
-                  src="/images/VIBRATING SCREEN 1.jpeg"
+                  src="/images/VIBRATING_SCREEN1.jpeg"
                   alt="Quality inspection"
                   className="rounded-2xl shadow-2xl w-full object-cover"
                 />
@@ -544,7 +544,7 @@ export default function Home() {
       {/* CTA SECTION */}
       <section className="py-20 bg-gradient-to-br from-blue-950 via-blue-900 to-cyan-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/CONVEYOR IDLER ROLLERS & FRAME 3.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
+          <img src="/images/CONVEYOR_IDLER_ROLLERS_&_FRAME3.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
@@ -590,21 +590,21 @@ export default function Home() {
                 excerpt: 'Selection of the right jaw plate material—manganese steel, alloy steel, or chrome steel—depends on the hardness of the material being crushed.',
                 date: 'March 2024',
                 category: 'Technical Guide',
-                image: '/images/JAW PLATES 2.jpeg',
+                image: '/images/JAW_PLATES2.jpeg',
               },
               {
                 title: 'Complete Guide to Conveyor Idler Roller Selection',
                 excerpt: 'Proper selection of conveyor idler rollers ensures longer belt life, reduced power consumption, and lower maintenance costs.',
                 date: 'February 2024',
                 category: 'Industry Guide',
-                image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME_2.jpeg',
+                image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME2.jpeg',
               },
               {
                 title: 'Importing Industrial Parts from India: What Buyers Need to Know',
                 excerpt: 'A comprehensive guide to importing industrial parts from India, covering documentation, customs clearance, and quality verification.',
                 date: 'January 2024',
                 category: 'Export Guide',
-                image: '/images/ConveyorRollers.jpeg',
+                image: '/images/Conveyor_Rollers2.png',
               },
             ].map((post, i) => (
               <ScrollReveal key={i} delay={i * 0.1} variant="fadeUp">

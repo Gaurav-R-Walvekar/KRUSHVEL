@@ -62,7 +62,7 @@ export default function Contact() {
       {/* Hero */}
       <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-slate-900 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/VIBRATING SCREEN 1.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
+          <img src="/images/VIBRATING_SCREEN_1.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
