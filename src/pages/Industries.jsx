@@ -48,7 +48,7 @@ const industries = [
     id: 'material-handling',
     icon: '🔄',
     title: 'Material Handling',
-    image: '/images/Conveyor_Rollers2.png',
+    image: '/images/Conveyor_Rollers2.jpeg',
     desc: 'Complete material handling solutions including conveyor systems, idler rollers, and bulk handling equipment.',
     details: 'Material handling facilities need reliable conveyor components for continuous operation. We supply complete conveyor roller sets, impact rollers, drum pulleys, conveyor belts, and accessories for bulk material handling operations.',
     products: ['Conveyor Idler Rollers', 'Impact Rollers', 'Drum Rollers', 'Conveyor Belts', 'Guide Rollers', 'Rubber U-Bidding'],
@@ -67,7 +67,7 @@ export default function Industries() {
       />
 
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-slate-900 overflow-hidden">
+      <section className="relative pt-28 pb-16 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
           <img src="/images/VIBRATING_SCREEN_2.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
         </div>

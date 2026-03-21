@@ -101,7 +101,7 @@ export default function ProductCategory() {
       />
 
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-cyan-900 overflow-hidden">
+      <section className="relative pt-28 pb-16 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
           <img src={meta.heroImage} alt={meta.h1} className="w-full h-full object-cover opacity-15" />
         </div>
@@ -144,7 +144,7 @@ export default function ProductCategory() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                     {product.bestseller && (
                       <div className="absolute top-3 left-3">

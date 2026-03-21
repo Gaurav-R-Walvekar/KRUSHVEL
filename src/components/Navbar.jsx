@@ -98,8 +98,27 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(null)
   const [languageOpen, setLanguageOpen] = useState(false)
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0])
+  const [translateReady, setTranslateReady] = useState(false)
   const location = useLocation()
   const languageRef = useRef(null)
+
+  // Wait for Google Translate to be ready
+  useEffect(() => {
+    const checkTranslateReady = () => {
+      const select = document.querySelector('.goog-te-combo')
+      if (select) {
+        setTranslateReady(true)
+      }
+    }
+    
+    // Check immediately and then poll
+    checkTranslateReady()
+    const interval = setInterval(checkTranslateReady, 500)
+    
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -157,18 +176,33 @@ export default function Navbar() {
   const handleLanguageSelect = (lang, isMobile = false) => {
     setSelectedLanguage(lang)
     
-    // Trigger Google Translate
-    const select = document.querySelector('.goog-te-combo')
-    if (select) {
-      select.value = lang.code
-      select.dispatchEvent(new Event('change', { bubbles: true }))
+    // Function to trigger Google Translate
+    const triggerTranslate = () => {
+      const select = document.querySelector('.goog-te-combo')
+      if (select) {
+        select.value = lang.code
+        select.dispatchEvent(new Event('change', { bubbles: true }))
+        return true
+      }
+      return false
+    }
+    
+    // Try immediately first
+    if (!triggerTranslate()) {
+      // If not found, retry with increasing delays (helpful for mobile)
+      const delays = [100, 300, 500, 1000, 1500]
+      delays.forEach((delay, index) => {
+        setTimeout(() => {
+          triggerTranslate()
+        }, delay)
+      })
     }
     
     // Close dropdown after a small delay to ensure translation triggers
     if (isMobile) {
       setTimeout(() => setLanguageOpen(false), 300)
     } else {
-      setLanguageOpen(false)
+      setTimeout(() => setLanguageOpen(false), 100)
     }
   }
 
@@ -338,10 +372,7 @@ export default function Navbar() {
           {/* Hidden Google Translate Element (for functionality) */}
           <div 
             id="google_translate_element" 
-            ref={(el) => {
-              if (el) el.style.display = 'none';
-            }}
-            style={{ position: 'absolute', left: '-9999px', visibility: 'hidden' }}
+            style={{ position: 'absolute', width: '1px', height: '1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', margin: '-1px', padding: 0, border: 0 }}
           ></div>
 
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=KrushvelGlobalExim@gmail.com" 
@@ -373,7 +404,7 @@ export default function Navbar() {
             </svg>
           </a>
           <Link to="/contact" className="btn-primary text-sm px-5 py-2.5">
-            Get Quote
+            Contact Us
           </Link>
         </div>
 
@@ -522,7 +553,7 @@ export default function Navbar() {
                   </a>
                 </div>
                 <Link to="/contact" className="btn-primary w-full justify-center text-sm">
-                  Get Quote
+                  Contact Us
                 </Link>
               </li>
             </ul>

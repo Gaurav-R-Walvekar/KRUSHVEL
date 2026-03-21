@@ -53,22 +53,29 @@ export default function Services() {
       />
 
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-teal-900 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-slate-900">
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <img src="/images/CONVEYOR_BELT.jpeg" alt="" className="w-full h-full object-cover opacity-10" />
+          <img src="/images/CONVEYOR_BELT.jpeg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/50" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        {/* Ambient Glow */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10 pt-28 pb-16">
           <ScrollReveal>
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/20 border border-teal-400/30 rounded-full text-teal-300 text-sm mb-6">
                 Our Services
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Export Services</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-teal-100 to-teal-300 bg-clip-text text-transparent mb-6">Our Export Services</h1>
               <p className="text-xl text-slate-300 mb-8">
                 Complete export services from product sourcing to door delivery. We handle everything so you can focus on your business.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="btn-primary">Request Export Support</Link>
+                <Link to="/contact" className="btn-primary shadow-cyan-500/30 hover:shadow-cyan-500/50">Request Export Support</Link>
                 <Link to="/contact?type=import" className="btn-secondary">Discuss Your Import Requirement</Link>
               </div>
             </div>

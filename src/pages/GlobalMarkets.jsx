@@ -20,7 +20,7 @@ export default function GlobalMarkets() {
         description="Krushvel exports crusher parts and conveyor components to 50+ countries across Africa, Middle East, Asia, Americas, Europe, and Oceania."
         keywords="industrial parts export markets, crusher parts global buyer, conveyor rollers worldwide supply from India"
       />
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-cyan-900">
+      <section className="relative pt-28 pb-16 bg-slate-900">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Global Markets We Serve</h1>

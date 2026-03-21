@@ -11,7 +11,7 @@ export default function Certifications() {
         description="Krushvel maintains strict quality standards and certifications for exporting industrial parts from India."
         keywords="quality certifications industrial exporter India, ISO certified crusher parts supplier"
       />
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-slate-900">
+      <section className="relative pt-28 pb-16 bg-slate-900">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Quality & Certifications</h1>

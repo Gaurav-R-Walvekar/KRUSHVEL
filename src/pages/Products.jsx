@@ -17,22 +17,29 @@ export default function Products() {
       />
 
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-cyan-900 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-slate-900">
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <img src="/images/CONVEYOR_IDLER_ROLLERS_&_FRAME3.jpeg" alt="" className="w-full h-full object-cover opacity-15" />
+          <img src="/images/CONVEYOR_IDLER_ROLLERS_&_FRAME3.jpeg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/50" />
         </div>
-        <div className="container mx-auto px-4 relative z-10">
+        {/* Ambient Glow */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10 pt-28 pb-16">
           <ScrollReveal>
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm mb-6">
                 Our Products
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Export Products</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent mb-6">Our Export Products</h1>
               <p className="text-xl text-slate-300 mb-8">
                 Complete range of industrial crusher and conveyor parts for global buyers. Quality products from India at competitive export prices.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="btn-primary">
+                <Link to="/contact" className="btn-primary shadow-cyan-500/30 hover:shadow-cyan-500/50">
                   Request Product Specifications
                 </Link>
                 <Link to="/contact?type=pricelist" className="btn-secondary">
@@ -62,7 +69,7 @@ export default function Products() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                     {product.bestseller && (
                       <div className="absolute top-2 left-2">

@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
         description="Discover why global buyers trust Krushvel for crusher parts, conveyor rollers and industrial equipment from India."
         keywords="why choose krushvel, best industrial parts exporter India, reliable crusher parts supplier"
       />
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-slate-900 overflow-hidden">
+      <section className="relative pt-28 pb-16 bg-slate-900 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Buyers Choose Us</h1>

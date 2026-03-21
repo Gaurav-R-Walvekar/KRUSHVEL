@@ -11,7 +11,7 @@ export default function ExportProcess() {
         description="Learn about our streamlined export process for industrial parts from India to global buyers."
         keywords="export process industrial parts India, how to import crusher parts India"
       />
-      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-slate-900">
+      <section className="relative pt-28 pb-16 bg-slate-900">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Export Process</h1>

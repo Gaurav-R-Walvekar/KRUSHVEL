@@ -290,7 +290,7 @@ export const allProducts = [
     name: 'Conveyor Rollers',
     category: 'conveyor-components',
     description: 'Standard conveyor return and carry rollers for bulk material handling across industries.',
-    image: '/images/Conveyor_Rollers2.png',
+    image: '/images/Conveyor_Rollers2.jpeg',
     bestseller: false,
     keywords: 'conveyor rollers exporter India, return roller supplier',
     specs: ['Various Diameters', 'Painted/Galvanized', 'All Lengths Available', 'Long Life Bearings'],

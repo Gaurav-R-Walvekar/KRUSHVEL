@@ -122,7 +122,8 @@ export default function Home() {
               alt="Industrial equipment"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-900/85 to-cyan-900/70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-800/70 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/50" />
           </motion.div>
         </AnimatePresence>
 
@@ -140,6 +141,9 @@ export default function Home() {
         </div>
 
         <motion.div style={{ opacity: heroOpacity }} className="relative z-10 container mx-auto px-4 pt-24 pb-16">
+          {/* Glassmorphism effect */}
+          <div className="absolute top-40 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -159,7 +163,7 @@ export default function Home() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent mb-4 leading-tight">
                   {heroSlides[currentSlide].title}
                 </h1>
                 <p className="text-xl text-slate-300 mb-3">{heroSlides[currentSlide].subtitle}</p>
@@ -173,7 +177,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4"
             >
-              <Link to="/products" className="btn-primary text-base px-8 py-4">
+              <Link to="/products" className="btn-primary text-base px-8 py-4 shadow-cyan-500/30 hover:shadow-cyan-500/50">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
@@ -311,7 +315,7 @@ export default function Home() {
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-52 object-contain group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3">
                       <span className="px-3 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full">
@@ -515,7 +519,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: '💰', title: 'Competitive Pricing', desc: 'Direct from manufacturer pricing with no intermediaries. Best price for quality products.' },
-              { icon: '🚀', title: 'Fast Delivery', desc: 'Quick order processing and efficient shipping via sea & air freight globally.' },
+              { icon: '✅', title: 'Quality Assurance', desc: 'ISO certified processes ensuring the highest quality standards for every product.' },
               { icon: '🔧', title: 'Technical Support', desc: 'Expert technical team to help you select the right parts for your application.' },
               { icon: '📋', title: 'Complete Documentation', desc: 'Full export documentation including commercial invoice, packing list, bill of lading & certificates.' },
               { icon: '🎯', title: 'Custom Orders', desc: 'Non-standard sizes, special materials, and OEM specifications available on request.' },
@@ -604,13 +608,13 @@ export default function Home() {
                 excerpt: 'A comprehensive guide to importing industrial parts from India, covering documentation, customs clearance, and quality verification.',
                 date: 'January 2024',
                 category: 'Export Guide',
-                image: '/images/Conveyor_Rollers2.png',
+                image: '/images/Conveyor_Rollers2.jpeg',
               },
             ].map((post, i) => (
               <ScrollReveal key={i} delay={i * 0.1} variant="fadeUp">
                 <motion.div whileHover={{ y: -5 }} className="glass-card-light overflow-hidden group cursor-pointer">
                   <div className="overflow-hidden h-44">
-                    <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={post.image} alt={post.title} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center gap-2 mb-3">
