@@ -6,7 +6,7 @@ import ScrollReveal from '../components/ScrollReveal'
 const milestones = [
   { year: '2010', title: 'Crushwell Engineering & Fabricators', desc: 'Started as a repairing unit for crusher and industrial machinery parts in Pune, India.' },
   { year: '2013', title: 'Jai Vinayak Enterprises', desc: 'Transitioned to manufacturing sector, expanding production capabilities for crusher spare parts.' },
-  { year: '2016', title: 'Sonycrusher', desc: 'Established as a comprehensive manufacturer and repairer serving domestic market across India.' },
+  { year: '2016', title: 'sony crusher engineering and wiremesh Udyog', desc: 'Established as a comprehensive manufacturer and repairer serving domestic market across India.' },
   { year: '2019', title: 'Krushvel Global Exim', desc: 'Split from operations to focus on international exports, serving global buyers.' },
   { year: '2022', title: 'ISO Compliance', desc: 'Implemented ISO-compliant quality management system across all operations.' },
   { year: '2024', title: '50+ Countries', desc: 'Now proudly serving industrial buyers in more than 50 countries globally.' },
@@ -80,7 +80,7 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal variant="fadeRight">
               <div className="relative">
-                <img src="/images/Vibrating_screen_10 .jpeg" alt="Our company" className="rounded-2xl shadow-2xl w-full h-80 object-cover" />
+                <img src="/images/Vibrating_screen_10.jpeg" alt="Our company" className="rounded-2xl shadow-2xl w-full h-64 md:h-80 object-cover" />
                 <div className="absolute -bottom-5 -right-5 glass-card-light p-5 rounded-2xl shadow-xl max-w-xs">
                   <div className="text-3xl font-bold text-cyan-600 mb-1">14+</div>
                   <div className="text-slate-700 font-medium">Years of Export Excellence</div>
@@ -137,7 +137,7 @@ export default function About() {
             <ScrollReveal variant="fadeRight">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl"></div>
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-2" style={{ maxHeight: '500px', overflow: 'hidden' }}>
+                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-2 max-h-80 md:max-h-96 overflow-hidden">
                   <img 
                     src="/images/Akshay.jpeg" 
                     alt="Akshay Amol Gulunjkar, Founder of Krushvel Global Exim" 

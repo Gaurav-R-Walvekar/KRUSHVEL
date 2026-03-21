@@ -105,7 +105,7 @@ export default function Industries() {
                     </Link>
                   </div>
                   <div>
-                    <img src={ind.image} alt={ind.title} className="rounded-2xl shadow-xl w-full h-72 object-cover" />
+                    <img src={ind.image} alt={ind.title} className="rounded-2xl shadow-xl w-full h-56 md:h-72 object-cover" />
                   </div>
                 </div>
               </ScrollReveal>
