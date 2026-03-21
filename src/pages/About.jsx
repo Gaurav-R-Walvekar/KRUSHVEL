@@ -137,8 +137,7 @@ export default function About() {
             <ScrollReveal variant="fadeRight">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl"></div>
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-2 max-h-80 md:max-h-96 overflow-hidden">
-                  <img 
+                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-2" style={{ maxHeight: '500px', overflow: 'hidden' }}>                  <img 
                     src="/images/Akshay.jpeg" 
                     alt="Akshay Amol Gulunjkar, Founder of Krushvel Global Exim" 
                     className="w-full h-full rounded-xl object-cover"
