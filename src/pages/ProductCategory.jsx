@@ -14,7 +14,6 @@ const categoryMeta = {
     heroImage: '/images/JAW_PLATES2.jpeg',
     products: [
       { name: 'Jaw Plates', desc: 'High manganese steel jaw plates for primary crushing. Various sizes for different crusher models.', image: '/images/JAW_PLATES2.jpeg' },
-      { name: 'Cheek Plates', desc: 'Side plates protecting crusher frame sides from wear during crushing operations.', image: '/images/JAW_PLATES2.jpeg' },
       { name: 'Toggle Plates', desc: 'Safety toggle plates protecting crusher from uncrushable material damage.', image: '/images/Toggal_Plates.jpeg' },
       { name: 'Crusher Bolts', desc: 'High tensile fasteners for all types of crusher components.', image: '/images/Crusher_boults.jpeg' },
       { name: 'Crusher Bearings', desc: 'Heavy-duty spherical roller bearings for all crusher types.', image: '/images/Crusher_Vibrator_Bearings.jpeg' },
@@ -70,7 +69,7 @@ const categoryMeta = {
       { name: 'Toggle Bearings', desc: 'Jaw crusher toggle bearings for smooth toggle plate movement.', image: '/images/TOGGAL_BEARINGS.jpeg' },
       { name: 'Pillow Block Bearing', desc: 'UCF/UCP series pillow block bearings for industrial shaft mounting.', image: '/images/PELLOW_BLOCK.jpeg' },
       { name: 'Pedestal Bearing', desc: 'Heavy-duty plummer block bearings for demanding applications.', image: '/images/Pedistal_Bearing.jpeg' },
-      { name: 'C-Clamp for Vibrator', desc: 'Anti-vibration clamping bolts for screen mesh panels.', image: '/images/vibrator_clamping_boults.jpeg' },
+      { name: 'T-Boults', desc: 'Anti-vibration clamping bolts for screen mesh panels.', image: '/images/vibrator_clamping_boults.jpeg' },
     ],
   },
 }
@@ -101,7 +100,7 @@ export default function ProductCategory() {
       />
 
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-slate-900 overflow-hidden">
+      <section className="relative pt-28 pb-16 bg-gradient-to-br from-blue-950 to-cyan-900 overflow-hidden">
         <div className="absolute inset-0">
           <img src={meta.heroImage} alt={meta.h1} className="w-full h-full object-cover opacity-15" />
         </div>

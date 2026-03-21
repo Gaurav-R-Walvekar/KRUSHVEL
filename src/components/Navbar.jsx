@@ -227,7 +227,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1, duration: 0.4 }}
               >
-                KRUSHVEL
+                KRUSHVEL 
               </motion.span>
               <motion.img 
                 src="/images/Flag_of_India.png" 

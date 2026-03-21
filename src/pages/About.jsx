@@ -4,10 +4,10 @@ import SEOMeta from '../components/SEOMeta'
 import ScrollReveal from '../components/ScrollReveal'
 
 const milestones = [
-  { year: '2010', title: 'Company Founded', desc: 'Krushvel was established as a trading company for industrial parts in India.' },
-  { year: '2013', title: 'First Export', desc: 'Successfully shipped our first international order to Southeast Asia.' },
-  { year: '2016', title: 'Expanded Product Range', desc: 'Added conveyor system components and vibrating screen equipment to our catalog.' },
-  { year: '2019', title: '25+ Countries', desc: 'Reached the milestone of serving clients in over 25 countries worldwide.' },
+  { year: '2010', title: 'Crushwell Engineering & Fabricators', desc: 'Started as a repairing unit for crusher and industrial machinery parts in Pune, India.' },
+  { year: '2013', title: 'Jai Vinayak Enterprises', desc: 'Transitioned to manufacturing sector, expanding production capabilities for crusher spare parts.' },
+  { year: '2016', title: 'Sonycrusher', desc: 'Established as a comprehensive manufacturer and repairer serving domestic market across India.' },
+  { year: '2019', title: 'Krushvel Global Exim', desc: 'Split from operations to focus on international exports, serving global buyers.' },
   { year: '2022', title: 'ISO Compliance', desc: 'Implemented ISO-compliant quality management system across all operations.' },
   { year: '2024', title: '50+ Countries', desc: 'Now proudly serving industrial buyers in more than 50 countries globally.' },
 ]
@@ -80,7 +80,7 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal variant="fadeRight">
               <div className="relative">
-                <img src="/images/IndustrialGearbox.jpeg" alt="Our company" className="rounded-2xl shadow-2xl w-full h-80 object-cover" />
+                <img src="/images/Vibrating_screen_10 .jpeg" alt="Our company" className="rounded-2xl shadow-2xl w-full h-80 object-cover" />
                 <div className="absolute -bottom-5 -right-5 glass-card-light p-5 rounded-2xl shadow-xl max-w-xs">
                   <div className="text-3xl font-bold text-cyan-600 mb-1">14+</div>
                   <div className="text-slate-700 font-medium">Years of Export Excellence</div>

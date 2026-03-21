@@ -11,7 +11,7 @@ const industries = [
     image: '/images/JAW_PLATES2.jpeg',
     desc: 'We supply comprehensive mining equipment spare parts for open-cast and underground mining operations worldwide.',
     details: 'The mining industry demands the toughest crusher and conveyor components. We supply jaw plates, toggle plates, crusher bearings, conveyor idler rollers, impact rollers, and vibrating screen equipment specifically designed for the harsh conditions of mining operations.',
-    products: ['Jaw Plates & Cheek Plates', 'Crusher Bearings', 'Toggle Plates', 'Conveyor Idler Rollers', 'Vibrating Screen Machine', 'Wiremesh Screens'],
+    products: ['Jaw Plates', 'Crusher Bearings', 'Toggle Plates', 'Conveyor Idler Rollers', 'Vibrating Screen Machine', 'Wiremesh Screens'],
     keywords: 'mining equipment spare parts, mining crusher components, conveyor parts for mining',
   },
   {
@@ -41,7 +41,7 @@ const industries = [
     image: '/images/HEAVY_SPRINGS1.jpeg',
     desc: 'Quarry crusher components supplier for stone quarrying operations with complete range of wear parts.',
     details: 'Quarry operations require frequently replaced wear parts. As a dedicated quarry crusher components supplier, we maintain stock of the most commonly used jaw plates, cheek plates, toggle plates, and Screen media for fast delivery.',
-    products: ['Jaw Plates', 'Cheek Plates', 'Toggle Plates', 'Heavy Springs', 'Crusher Bolts', 'Screen Panels'],
+    products: ['Jaw Plates', 'Toggle Plates', 'Heavy Springs', 'Crusher Bolts', 'Screen Panels'],
     keywords: 'quarry crusher components supplier, stone quarry parts, quarry jaw plates exporter India',
   },
   {
