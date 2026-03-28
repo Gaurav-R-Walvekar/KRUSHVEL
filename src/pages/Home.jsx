@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import SEOMeta from '../components/SEOMeta'
@@ -82,18 +82,26 @@ const stats = [
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const bestsellers = getBestsellers()
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
-  const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
+  const heroY = useTransform(scrollYProgress, [0, 1], ['0%', isMobile ? '10%' : '30%'])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0])
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % heroSlides.length)
-    }, 5000)
+    }, isMobile ? 6000 : 5000)
     return () => clearInterval(timer)
-  }, [])
+  }, [isMobile])
 
   return (
     <>
@@ -105,17 +113,17 @@ export default function Home() {
       />
 
       {/* HERO SECTION */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden gpu-accelerated will-change-transform">
         {/* Background Slides */}
         <AnimatePresence mode="sync">
           <motion.div
             key={currentSlide}
-            initial={{ opacity: 0, scale: 1.05 }}
+            initial={{ opacity: 0, scale: isMobile ? 1.02 : 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: isMobile ? 0.6 : 1 }}
             style={{ y: heroY }}
-            className="absolute inset-0"
+            className="absolute inset-0 will-change-transform gpu-accelerated"
           >
             <img
               src={heroSlides[currentSlide].image}
@@ -127,29 +135,34 @@ export default function Home() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Animated particles */}
+        {/* Animated particles - optimized for mobile */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(isMobile ? 2 : 3)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 rounded-full bg-cyan-400/30"
-              animate={{ y: [-20, window?.innerHeight + 20], x: [Math.random() * 100, Math.random() * 100] }}
-              transition={{ duration: 8 + i * 2, repeat: Infinity, delay: i * 1.5 }}
-              style={{ left: `${15 + i * 18}%`, top: -20 }}
+              className="absolute w-2 h-2 rounded-full bg-cyan-400/30 will-change-transform"
+              animate={{ y: [-20, isMobile ? 800 : 1200], x: [Math.random() * 100, Math.random() * 100] }}
+              transition={{ 
+                duration: isMobile ? 12 + i * 2 : 10 + i * 2, 
+                repeat: Infinity, 
+                delay: i * 2, 
+                ease: 'linear' 
+              }}
+              style={{ left: `${20 + i * (isMobile ? 35 : 25)}%`, top: -20 }}
             />
           ))}
         </div>
 
-        <motion.div style={{ opacity: heroOpacity }} className="relative z-10 container mx-auto px-4 pt-24 pb-16">
-          {/* Glassmorphism effect */}
-          <div className="absolute top-40 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <motion.div style={{ opacity: heroOpacity }} className="relative z-10 container mx-auto px-4 pt-24 pb-16 will-change-opacity">
+          {/* Glassmorphism effect - optimized for mobile */}
+          <div className={`absolute top-40 left-10 w-72 h-72 bg-cyan-500/10 rounded-full ${isMobile ? 'blur-xl' : 'blur-3xl'}`} />
+          <div className={`absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full ${isMobile ? 'blur-xl' : 'blur-3xl'}`} />
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm mb-6 will-change-transform"
             >
               <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
               Trusted Global Exporter from <span className="text-orange-400">India</span>
@@ -158,10 +171,11 @@ export default function Home() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: isMobile ? 15 : 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.6 }}
+                exit={{ opacity: 0, y: isMobile ? -10 : -20 }}
+                transition={{ duration: isMobile ? 0.4 : 0.6 }}
+                className="will-change-transform"
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-cyan-100 to-cyan-300 bg-clip-text text-transparent mb-4 leading-tight">
                   {heroSlides[currentSlide].title}
@@ -172,10 +186,10 @@ export default function Home() {
             </AnimatePresence>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap gap-4"
+              transition={{ duration: isMobile ? 0.4 : 0.6, delay: isMobile ? 0.2 : 0.4 }}
+              className="flex flex-wrap gap-4 will-change-transform"
             >
               <Link to="/products" className="btn-primary text-base px-8 py-4 shadow-cyan-500/30 hover:shadow-cyan-500/50">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -193,7 +207,7 @@ export default function Home() {
           </div>
 
           {/* Slide indicators */}
-          <div className="mt-12 flex gap-2">
+          <div className="mt-12 flex gap-2 will-change-transform">
             {heroSlides.map((_, i) => (
               <button
                 key={i}
@@ -204,11 +218,11 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - optimized for mobile */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 will-change-transform gpu-accelerated"
+          animate={{ y: isMobile ? [0, 4, 0] : [0, 8, 0] }}
+          transition={{ duration: isMobile ? 2.5 : 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5">
             <div className="w-1.5 h-3 bg-white/60 rounded-full"></div>

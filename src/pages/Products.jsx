@@ -64,8 +64,8 @@ export default function Products() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {allProducts.map((product, i) => (
               <ScrollReveal key={product.id} delay={(i % 8) * 0.05} variant="fadeUp">
-                <motion.div whileHover={{ y: -6 }} className="product-card group">
-                  <div className="relative overflow-hidden h-44">
+                <motion.div whileHover={{ y: -6 }} className="product-card group flex flex-col h-full">
+                  <div className="relative overflow-hidden h-44 flex-shrink-0">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -82,15 +82,15 @@ export default function Products() {
                       </span>
                     </div>
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 flex flex-col flex-grow">
                     <h3 className="font-bold text-slate-800 mb-2">{product.name}</h3>
-                    <p className="text-slate-600 text-xs mb-3">{product.description}</p>
+                    <p className="text-slate-600 text-xs mb-3 line-clamp-3 flex-grow">{product.description}</p>
                     <div className="flex flex-wrap gap-1 mb-3">
                       {product.specs?.slice(0, 2).map((spec, j) => (
                         <span key={j} className="px-2 py-0.5 bg-slate-100 text-slate-600 text-xs rounded">{spec}</span>
                       ))}
                     </div>
-                    <Link to="/contact" className="btn-primary text-xs px-4 py-2 w-full justify-center">
+                    <Link to="/contact" className="btn-primary text-xs px-4 py-2 w-full justify-center mt-auto">
                       Request Quote
                     </Link>
                   </div>

@@ -143,3 +143,113 @@ body {
   position: absolute !important;
   left: -9999px !important;
 }
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  /* Reduce motion for better performance */
+  .will-change-transform {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+  
+  /* Optimize opacity animations */
+  .will-change-opacity {
+    will-change: opacity;
+  }
+  
+  /* Optimize animations on mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Reduce blur effects on mobile for better performance */
+  .blur-3xl {
+    filter: blur(40px);
+  }
+  
+  .blur-xl {
+    filter: blur(20px);
+  }
+  
+  /* Optimize image rendering on mobile */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+  
+  /* Optimize backdrop blur on mobile */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  /* Optimize glass effects on mobile */
+  .glass-card-light {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  /* Reduce paint complexity for animated elements */
+  [class*='motion'] {
+    transform: translateZ(0);
+  }
+  
+  /* Optimize AnimatePresence on mobile */
+  [class*='AnimatePresence'] {
+    transform: translateZ(0);
+  }
+  
+  /* Reduce complexity of gradient animations */
+  .bg-gradient-to-r {
+    background-size: 100% 100%;
+  }
+  
+  /* Optimize scale animations */
+  [style*='scale'] {
+    transform: translateZ(0);
+  }
+  
+  /* Optimize transition animations */
+  .transition-all {
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Reduce complexity of shadow animations */
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Optimize pulse animations on mobile */
+  .animate-pulse {
+    animation-duration: 2s;
+  }
+  
+  /* Reduce complexity of gradient text on mobile */
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduce paint complexity */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

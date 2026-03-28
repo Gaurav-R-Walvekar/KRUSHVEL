@@ -138,8 +138,8 @@ export default function ProductCategory() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {meta.products.map((product, i) => (
               <ScrollReveal key={i} delay={i * 0.08} variant="fadeUp">
-                <motion.div whileHover={{ y: -8 }} className="product-card group">
-                  <div className="relative overflow-hidden h-52">
+                <motion.div whileHover={{ y: -8 }} className="product-card group flex flex-col h-full">
+                  <div className="relative overflow-hidden h-52 flex-shrink-0">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -151,10 +151,10 @@ export default function ProductCategory() {
                       </div>
                     )}
                   </div>
-                  <div className="p-5">
+                  <div className="p-5 flex flex-col flex-grow">
                     <h2 className="font-bold text-slate-800 text-lg mb-2">{product.name}</h2>
-                    <p className="text-slate-600 text-sm mb-4">{product.desc}</p>
-                    <div className="flex gap-2">
+                    <p className="text-slate-600 text-sm mb-4 line-clamp-3 flex-grow">{product.desc}</p>
+                    <div className="flex gap-2 mt-auto">
                       <Link to="/contact" className="btn-primary text-xs px-4 py-2 flex-1 justify-center">
                         Request Quote
                       </Link>
