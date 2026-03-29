@@ -9,7 +9,6 @@ const navLinks = [
   { label: 'Services', to: '/services' },
   { label: 'Industries', to: '/industries' },
   { label: 'Certifications', to: '/certifications' },
-  { label: 'Contact', to: '/contact' },
 ]
 
 // Language options for the custom dropdown

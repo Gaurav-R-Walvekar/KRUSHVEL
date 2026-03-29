@@ -15,16 +15,16 @@ export default function GlobalMarkets() {
   return (
     <>
       <SEOMeta
-        title="Global Markets We Serve"
-        metaTitle="Global Industrial Parts Export Markets"
-        description="Krushvel exports crusher parts and conveyor components to 50+ countries across Africa, Middle East, Asia, Americas, Europe, and Oceania."
+        title="Global Markets We Target"
+        metaTitle="Target Global Markets for Industrial Parts Export"
+        description="Krushvel is expanding to export crusher parts and conveyor components to global markets across Africa, Middle East, Asia, Americas, Europe, and Oceania."
         keywords="industrial parts export markets, crusher parts global buyer, conveyor rollers worldwide supply from India"
       />
       <section className="relative pt-28 pb-16 bg-slate-900">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Global Markets We Serve</h1>
-            <p className="text-xl text-slate-300 max-w-2xl">Exporting industrial parts to buyers in 50+ countries across 6 continents</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Global Markets We Target</h1>
+            <p className="text-xl text-slate-300 max-w-2xl">Expanding our reach to serve industrial buyers across 6 continents</p>
           </ScrollReveal>
         </div>
       </section>
@@ -48,7 +48,7 @@ export default function GlobalMarkets() {
 
           <ScrollReveal delay={0.3}>
             <div className="text-center mt-12">
-              <p className="text-slate-600 mb-6">Don't see your country? We export to virtually any country worldwide.</p>
+              <p className="text-slate-600 mb-6">Don't see your country? We are ready to export to virtually any country worldwide.</p>
               <Link to="/contact" className="btn-primary">Inquire for Your Country</Link>
             </div>
           </ScrollReveal>

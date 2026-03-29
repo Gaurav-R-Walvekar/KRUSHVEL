@@ -12,11 +12,11 @@ export default function Footer() {
               <img src="/images/KRUSHVEL_icon.jpg" alt="Krushvel" className="h-12 w-12 rounded-full border-2 border-cyan-400 object-cover" />
               <div>
                 <span className="text-xl font-bold block">KRUSHVEL</span>
-                <span className="text-xs text-cyan-400">Industrial Parts Exporter</span>
+                <span className="text-xs text-cyan-400">Industrial Parts Manufacturer</span>
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-5">
-              Trusted Indian exporter of conveyor rollers, crusher parts, wiremesh screens & industrial components for global buyers. Quality products since 2010.
+              Established Indian manufacturer of conveyor rollers, crusher parts, wiremesh screens & industrial components now expanding to serve global buyers. Quality products since 2010.
             </p>
           </div>
 
@@ -131,7 +131,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm text-center">
-            © {new Date().getFullYear()} Krushvel. All rights reserved. Global Exporter of Industrial Parts from India.
+            © {new Date().getFullYear()} Krushvel. All rights reserved. Indian Manufacturer Expanding to Global Markets.
           </p>
           <div className="flex gap-4 text-xs text-slate-500">
             <Link to="/privacy-policy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>

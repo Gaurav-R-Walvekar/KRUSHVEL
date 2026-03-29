@@ -9,20 +9,20 @@ const heroSlides = [
   {
     image: '/images/Vibrating_Screen.png',
     title: 'Industrial Equipment & Crusher Parts',
-    subtitle: 'Exporter from India',
-    desc: 'Trusted supplier of crusher spare parts, conveyor rollers & industrial equipment to global buyers.',
+    subtitle: 'Expanding to Global Markets',
+    desc: 'Established Indian manufacturer now serving global buyers with crusher spare parts, conveyor rollers & industrial equipment.',
   },
   {
     image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME2.jpeg',
     title: 'Conveyor System Components',
     subtitle: 'Built for Demanding Industries',
-    desc: 'Premium quality idler rollers, impact rollers, drum rollers & conveyor belts for mining & cement plants.',
+    desc: 'Premium quality idler rollers, impact rollers, drum rollers & conveyor belts for mining & cement plants worldwide.',
   },
   {
     image: '/images/StoneCrusherPlan.jpg',
     title: 'Wiremesh Screens & Vibrating Equipment',
     subtitle: 'Precision Engineered Products',
-    desc: 'High-quality vibrating screen machines, wiremesh screens & screen bearing housings for global export.',
+    desc: 'High-quality vibrating screen machines, wiremesh screens & screen bearing housings ready for global export.',
   },
 ]
 
@@ -74,10 +74,10 @@ const exportProcess = [
 const globalMarkets = ['USA', 'UAE', 'South Africa', 'Australia', 'Kenya', 'Ghana', 'Indonesia', 'Philippines', 'Brazil', 'Canada', 'UK', 'Germany']
 
 const stats = [
-  { value: '14+', label: 'Years Experience' },
-  { value: '50+', label: 'Countries Served' },
-  { value: '500+', label: 'Happy Clients' },
-  { value: '1000+', label: 'Products Exported' },
+  { value: '10+', label: 'Years Manufacturing' },
+  { value: '50+', label: 'Target Countries' },
+  { value: '500+', label: 'Happy Customers'},
+  { value: '1000+', label: 'Domestic Clients' },
 ]
 
 export default function Home() {
@@ -106,9 +106,9 @@ export default function Home() {
   return (
     <>
       <SEOMeta
-        title="Global Exporter of Crusher & Conveyor Parts from India"
-        metaTitle="Industrial Parts Exporter from India"
-        description="Trusted Indian exporter of conveyor rollers, crusher parts, wiremesh screens & industrial components for global buyers."
+        title="Indian Manufacturer Expanding to Global Markets"
+        metaTitle="Industrial Parts Manufacturer from India - Now Exporting Globally"
+        description="Established Indian manufacturer of conveyor rollers, crusher parts, wiremesh screens & industrial components now serving global buyers."
         keywords="crusher parts exporter India, conveyor rollers supplier, wiremesh screen exporter, industrial parts India, jaw plates exporter"
       />
 
@@ -165,7 +165,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm mb-6 will-change-transform"
             >
               <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-              Trusted Global Exporter from <span className="text-orange-400">India</span>
+              Indian Manufacturer Expanding to <span className="text-orange-400">Global Markets</span>
             </motion.div>
 
             <AnimatePresence mode="wait">
@@ -254,16 +254,16 @@ export default function Home() {
               <div>
                 <div className="inline-block px-4 py-1.5 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium mb-4">About Us</div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-                  About Our Export Company
+                  From Domestic Excellence to Global Markets
                 </h2>
                 <p className="text-slate-600 mb-4">
-                  Krushvel is a leading <strong>industrial parts exporter from India</strong> with over 14 years of experience supplying crusher spare parts, conveyor components, vibrating screen equipment, and engineering components to global buyers.
+                  Krushvel is an established <strong>Indian manufacturer of industrial parts</strong> with over 10 years of experience supplying crusher spare parts, conveyor components, vibrating screen equipment, and engineering components to domestic markets.
                 </p>
                 <p className="text-slate-600 mb-4">
-                  We specialize in sourcing and exporting high-quality industrial parts to mining companies, cement plants, quarry operators, and construction firms worldwide. Our commitment to quality and competitive pricing has made us the preferred export partner for buyers across 50+ countries.
+                  We have built our reputation on quality manufacturing and reliable supply to mining companies, cement plants, quarry operators, and construction firms across India. Now, we are expanding our reach to serve global buyers with the same commitment to excellence.
                 </p>
                 <p className="text-slate-600 mb-6">
-                  With proven expertise in LCL & FCL shipments, pre-shipment quality inspection, and complete export documentation, we ensure seamless import experience for our global clients.
+                  With proven manufacturing capabilities, ISO-compliant quality systems, and a dedicated export team, we are ready to bring Indian engineering excellence to international markets. We handle LCL & FCL shipments, pre-shipment quality inspection, and complete export documentation.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Link to="/about" className="btn-outline">
@@ -283,8 +283,8 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="glass-card-light p-5 rounded-2xl">
                   <div className="text-3xl mb-2">🌍</div>
-                  <h3 className="font-semibold text-slate-800 mb-1">Global Reach</h3>
-                  <p className="text-sm text-slate-600">Exporting to 50+ countries across 6 continents</p>
+                  <h3 className="font-semibold text-slate-800 mb-1">Global Focus</h3>
+                  <p className="text-sm text-slate-600">Now targeting 50+ countries across 6 continents</p>
                 </div>
                 <div className="glass-card-light p-5 rounded-2xl">
                   <div className="text-3xl mb-2">✅</div>
@@ -313,8 +313,8 @@ export default function Home() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <div className="inline-block px-4 py-1.5 bg-orange-100 text-orange-700 rounded-full text-sm font-medium mb-4">⭐ Bestsellers</div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Most Exported Products</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">Trusted by mining companies, cement plants, and industrial buyers worldwide. These are our most in-demand export products.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Premium Products</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto">Trusted by mining companies, cement plants, and industrial buyers across India. These are our most in-demand products now available for global export.</p>
             </div>
           </ScrollReveal>
 
@@ -372,7 +372,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <div className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">Industries</div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Industries We Serve</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">We supply industrial parts to diverse sectors globally. From mining and cement to construction and quarry operations.</p>
+              <p className="text-slate-600 max-w-2xl mx-auto">We supply industrial parts to diverse sectors. From mining and cement to construction and quarry operations, we serve both domestic and global markets.</p>
             </div>
           </ScrollReveal>
 
@@ -403,7 +403,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <div className="inline-block px-4 py-1.5 bg-teal-100 text-teal-700 rounded-full text-sm font-medium mb-4">How We Work</div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Our Export Process</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">Simple, transparent and efficient. Here's how we fulfill your industrial parts export requirements.</p>
+              <p className="text-slate-600 max-w-2xl mx-auto">Simple, transparent and efficient. Here's how we fulfill your industrial parts export requirements as we begin our export journey.</p>
             </div>
           </ScrollReveal>
 
@@ -442,8 +442,8 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-white mb-3">Global Markets We Serve</h2>
-              <p className="text-cyan-100">Exporting industrial parts to buyers across all continents</p>
+              <h2 className="text-3xl font-bold text-white mb-3">Global Markets We Target</h2>
+              <p className="text-cyan-100">Expanding our reach to serve industrial buyers across all continents</p>
             </div>
           </ScrollReveal>
           <div className="flex flex-wrap justify-center gap-3">
@@ -474,7 +474,7 @@ export default function Home() {
                 <div className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">Quality</div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Quality & Certifications</h2>
                 <p className="text-slate-600 mb-4">
-                  At Krushvel, quality is our foundation. Every product we export undergoes rigorous quality control procedures to ensure it meets international standards and client specifications.
+                  At Krushvel, quality is our foundation. Every product we manufacture undergoes rigorous quality control procedures to ensure it meets international standards and client specifications.
                 </p>
                 <ul className="space-y-3 mb-6">
                   {[
@@ -526,7 +526,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <div className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">Why Us</div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Why Buyers Choose Us</h2>
-              <p className="text-slate-600 max-w-2xl mx-auto">Thousands of industrial buyers worldwide trust Krushvel for reliable supply of crusher parts and conveyor components.</p>
+              <p className="text-slate-600 max-w-2xl mx-auto">Industrial buyers trust Krushvel for reliable supply of crusher parts and conveyor components from India.</p>
             </div>
           </ScrollReveal>
 
@@ -567,10 +567,10 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Source Industrial Parts?
+              Ready to Source Industrial Parts from India?
             </h2>
             <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
-              Contact our export team today for crusher parts, conveyor components, and complete industrial equipment at competitive prices.
+              Contact our export team today for crusher parts, conveyor components, and complete industrial equipment at competitive prices. We are ready to serve global buyers.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="btn-primary text-base px-8 py-4">
