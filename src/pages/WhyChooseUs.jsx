@@ -8,15 +8,15 @@ export default function WhyChooseUs() {
     <>
       <SEOMeta
         title="Why Choose Krushvel"
-        metaTitle="Why Choose Krushvel - New Exporter from India"
-        description="Discover why global buyers should choose Krushvel for crusher parts, conveyor rollers and industrial equipment from India. We are initiating export operations with proven manufacturing expertise."
-        keywords="why choose krushvel, industrial parts exporter India, reliable crusher parts supplier, new exporter India"
+        metaTitle="Why Choose Krushvel - Dual Division Industrial Manufacturer"
+        description="Discover why buyers should choose Krushvel for crusher parts, conveyor rollers and industrial equipment from India. With dual divisions (Domestic & Export), we offer proven manufacturing expertise and global supply capabilities."
+        keywords="why choose krushvel, industrial parts exporter India, reliable crusher parts supplier, Sony Crusher Engineering, Krushvel Global Exim"
       />
       <section className="relative pt-28 pb-16 bg-slate-900 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Buyers Choose Us</h1>
-            <p className="text-xl text-slate-300 max-w-2xl">The trusted choice for industrial parts from India, now expanding to serve global markets</p>
+            <p className="text-xl text-slate-300 max-w-2xl">The trusted choice for industrial parts from India with dual division structure serving both domestic and global markets</p>
           </ScrollReveal>
         </div>
       </section>
@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
               { icon: '✅', title: 'Quality Assurance', desc: '100% pre-shipment quality inspection. We verify every product before it leaves our warehouse to ensure it meets your specifications. ISO-compliant quality management.' },
               { icon: '🚀', title: 'Fast Processing', desc: 'Quick order processing with standard lead time of 7-15 days for stocked items and 30-45 days for custom orders. We understand the importance of timely delivery.' },
               { icon: '📋', title: 'Complete Documentation', desc: 'All export documents prepared accurately — commercial invoice, packing list, bill of lading, COO, test certificates. We handle all documentation requirements.' },
-              { icon: '🔧', title: 'Technical Expertise', desc: 'Over 10 years of technical knowledge in crusher and conveyor parts to help you select the right products. Our team understands industrial applications.' },
+              { icon: '🔧', title: 'Technical Expertise', desc: 'Over 60 years of technical knowledge in crusher and conveyor parts to help you select the right products. Our team understands industrial applications.' },
               { icon: '🌍', title: 'Global Logistics', desc: 'Strong freight partnerships for competitive ocean and air freight rates to all major ports worldwide. We are ready to serve buyers across all continents.' },
               { icon: '📦', title: 'Custom Packaging', desc: 'Products packaged to survive international shipping with options for wooden crates, pallets, and customized labeling. Safe transit is our priority.' },
               { icon: '💬', title: 'Responsive Support', desc: 'Dedicated account managers with fast response via email, WhatsApp, and phone for seamless communication. We are here to support your import journey.' },

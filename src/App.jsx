@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
+import DomesticDivision from './pages/DomesticDivision'
 import Products from './pages/Products'
 import ProductCategory from './pages/ProductCategory'
 import Services from './pages/Services'
@@ -31,6 +32,7 @@ function AppLayout() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/domestic-division" element={<DomesticDivision />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:categoryId" element={<ProductCategory />} />
           <Route path="/services" element={<Services />} />

@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
+  { label: 'Domestic Division', to: '/domestic-division' },
   { label: 'Products', to: '/products' },
   { label: 'Services', to: '/services' },
-  { label: 'Industries', to: '/industries' },
   { label: 'Certifications', to: '/certifications' },
 ]
 
@@ -212,9 +212,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <motion.img 
-            src="/images/KRUSHVEL_icon.jpg" 
+            src="/images/KRUSHVEL_logo.jpg" 
             alt="Krushvel Logo" 
-            className="h-12 w-12 rounded-full border-2 border-cyan-400 object-cover"
+            className="h-14 w-14 rounded-full border-2 border-cyan-400 object-cover"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}

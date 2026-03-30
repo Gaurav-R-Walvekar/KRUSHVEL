@@ -315,6 +315,16 @@ export const allProducts = [
     keywords: 'vibrator C-clamp exporter, vibrating screen clamp supplier, screen mesh clamping manufacturer',
     specs: ['Forged Steel Construction', 'Rubber Vibration Bushings', 'Quick-Release Mechanism', 'All Screen Sizes', 'Anti-Corrosion Finish', 'Easy Installation'],
   },
+  {
+    id: 29,
+    name: 'Compactor AVC40 (5T)',
+    category: 'industrial-components',
+    description: 'Heavy-duty compactor machine AVC40 with 5-ton capacity for soil compaction, road construction, and foundation work.',
+    image: '/images/COMPACTOR_AVC40_(5T).jpeg',
+    bestseller: false,
+    keywords: 'compactor machine exporter, soil compactor supplier, road compactor manufacturer India, AVC40 compactor',
+    specs: ['3 Ton Capacity', 'Hydraulic Drive System', 'Heavy Duty Steel Construction', 'Vibratory Compaction', 'Easy Operation', 'Low Maintenance'],
+  },
 ];
 
 export const getBestsellers = () => allProducts.filter(p => p.bestseller);

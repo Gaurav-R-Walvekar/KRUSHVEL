@@ -9,14 +9,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src="/images/KRUSHVEL_icon.jpg" alt="Krushvel" className="h-12 w-12 rounded-full border-2 border-cyan-400 object-cover" />
+              <img src="/images/KRUSHVEL_logo.jpg" alt="Krushvel" className="h-14 w-14 rounded-full border-2 border-cyan-400 object-cover" />
               <div>
                 <span className="text-xl font-bold block">KRUSHVEL</span>
-                <span className="text-xs text-cyan-400">Industrial Parts Manufacturer</span>
+                <span className="text-xs text-cyan-400">GLOBAL EXIM</span>
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-5">
-              Established Indian manufacturer of conveyor rollers, crusher parts, wiremesh screens & industrial components now expanding to serve global buyers. Quality products since 2010.
+              Established Indian manufacturer with 60+ years of excellence. Sony Crusher Engineering & Wiremesh Udyog (Domestic Division) & Krushvel Global Exim (Export Division) serving buyers worldwide.
             </p>
           </div>
 
@@ -47,6 +47,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 ['About Us', '/about'],
+                ['Domestic Division', '/domestic-division'],
                 ['Our Services', '/services'],
                 ['Industries We Serve', '/industries'],
                 ['Export Process', '/export-process'],
@@ -131,7 +132,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-sm text-center">
-            © {new Date().getFullYear()} Krushvel. All rights reserved. Indian Manufacturer Expanding to Global Markets.
+            © {new Date().getFullYear()} Krushvel. All rights reserved. Indian Manufacturer with Dual Division Structure.
           </p>
           <div className="flex gap-4 text-xs text-slate-500">
             <Link to="/privacy-policy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>

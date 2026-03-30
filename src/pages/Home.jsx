@@ -9,8 +9,8 @@ const heroSlides = [
   {
     image: '/images/Vibrating_Screen.png',
     title: 'Industrial Equipment & Crusher Parts',
-    subtitle: 'Expanding to Global Markets',
-    desc: 'Established Indian manufacturer now serving global buyers with crusher spare parts, conveyor rollers & industrial equipment.',
+    subtitle: 'Dual Division: Domestic & Export',
+    desc: 'Established Indian manufacturer with 60+ years of excellence. Sony Crusher Engineering (Domestic) & Krushvel Global Exim (Export) serving buyers worldwide.',
   },
   {
     image: '/images/CONVEYOR_IDLER_ROLLERS_&_FRAME2.jpeg',
@@ -74,7 +74,7 @@ const exportProcess = [
 const globalMarkets = ['USA', 'UAE', 'South Africa', 'Australia', 'Kenya', 'Ghana', 'Indonesia', 'Philippines', 'Brazil', 'Canada', 'UK', 'Germany']
 
 const stats = [
-  { value: '10+', label: 'Years Manufacturing' },
+  { value: '60+', label: 'Years Manufacturing' },
   { value: '50+', label: 'Target Countries' },
   { value: '500+', label: 'Happy Customers'},
   { value: '1000+', label: 'Domestic Clients' },
@@ -106,10 +106,10 @@ export default function Home() {
   return (
     <>
       <SEOMeta
-        title="Indian Manufacturer Expanding to Global Markets"
-        metaTitle="Industrial Parts Manufacturer from India - Now Exporting Globally"
-        description="Established Indian manufacturer of conveyor rollers, crusher parts, wiremesh screens & industrial components now serving global buyers."
-        keywords="crusher parts exporter India, conveyor rollers supplier, wiremesh screen exporter, industrial parts India, jaw plates exporter"
+        title="Indian Manufacturer with Dual Division - Domestic & Export"
+        metaTitle="Industrial Parts Manufacturer - Sony Crusher Engineering (Domestic) & Krushvel Global Exim (Export)"
+        description="Established Indian manufacturer with 60+ years of excellence. Sony Crusher Engineering (Domestic) & Krushvel Global Exim (Export) serving buyers worldwide with crusher parts, conveyor rollers & industrial components."
+        keywords="crusher parts exporter India, conveyor rollers supplier, wiremesh screen exporter, industrial parts India, jaw plates exporter, Sony Crusher Engineering, Krushvel Global Exim"
       />
 
       {/* HERO SECTION */}
@@ -165,7 +165,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm mb-6 will-change-transform"
             >
               <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-              Indian Manufacturer Expanding to <span className="text-orange-400">Global Markets</span>
+              Indian Manufacturer with <span className="text-orange-400">Dual Division Structure</span>
             </motion.div>
 
             <AnimatePresence mode="wait">
@@ -257,13 +257,13 @@ export default function Home() {
                   From Domestic Excellence to Global Markets
                 </h2>
                 <p className="text-slate-600 mb-4">
-                  Krushvel is an established <strong>Indian manufacturer of industrial parts</strong> with over 10 years of experience supplying crusher spare parts, conveyor components, vibrating screen equipment, and engineering components to domestic markets.
+                  Krushvel is an established <strong>Indian manufacturer of industrial parts</strong> with over 60 years of experience supplying crusher spare parts, conveyor components, vibrating screen equipment, and engineering components. Our journey began in 1966 with Crushwell Engineering & Fabricator.
                 </p>
                 <p className="text-slate-600 mb-4">
-                  We have built our reputation on quality manufacturing and reliable supply to mining companies, cement plants, quarry operators, and construction firms across India. Now, we are expanding our reach to serve global buyers with the same commitment to excellence.
+                  In 2026, we strategically bifurcated our operations into two divisions: <strong>Sony Crusher Engineering & Wiremesh Udyog</strong> (Domestic Division) serving the Indian market with 1000+ products, and <strong>Krushvel Global Exim</strong> (Export Division) capturing international opportunities.
                 </p>
                 <p className="text-slate-600 mb-6">
-                  With proven manufacturing capabilities, ISO-compliant quality systems, and a dedicated export team, we are ready to bring Indian engineering excellence to international markets. We handle LCL & FCL shipments, pre-shipment quality inspection, and complete export documentation.
+                  With proven manufacturing capabilities, ISO-compliant quality systems, and dedicated teams for both domestic and export operations, we are ready to serve buyers worldwide. We handle LCL & FCL shipments, pre-shipment quality inspection, and complete export documentation.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Link to="/about" className="btn-outline">
@@ -567,10 +567,10 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Source Industrial Parts from India?
+              Ready to Partner with Krushvel?
             </h2>
             <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
-              Contact our export team today for crusher parts, conveyor components, and complete industrial equipment at competitive prices. We are ready to serve global buyers.
+              Contact our domestic or export team today for crusher parts, conveyor components, and complete industrial equipment at competitive prices. We are ready to serve buyers worldwide.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="btn-primary text-base px-8 py-4">

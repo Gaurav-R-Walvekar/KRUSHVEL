@@ -4,10 +4,10 @@ import SEOMeta from '../components/SEOMeta'
 import ScrollReveal from '../components/ScrollReveal'
 
 const milestones = [
-  { year: '2010', title: 'Crushwell Engineering & Fabricators', desc: 'Started as a repairing unit for crusher and industrial machinery parts in Pune, India.' },
-  { year: '2013', title: 'Jai Vinayak Enterprises', desc: 'Transitioned to manufacturing sector, expanding production capabilities for crusher spare parts.' },
-  { year: '2016', title: 'sony crusher engineering and wiremesh Udyog', desc: 'Established as a comprehensive manufacturer and repairer serving domestic market across India.' },
-  { year: '2026', title: 'Krushvel Global Exim', desc: 'Initiating export operations to bring Indian manufacturing excellence to global markets.' },
+  { year: '1966', title: 'Crushwell Engineering & Fabricator', desc: 'Established as a foundational engineering and fabrication unit, laying the groundwork for decades of industrial excellence.' },
+  { year: '2010', title: 'Jai Vinayak Enterprises', desc: 'Strategic business expansion into industrial supply, broadening our service capabilities and market reach.' },
+  { year: '2017', title: 'Sony Crusher Engineering & Wiremesh Udyog', desc: 'Consolidated as a comprehensive manufacturer and repairer, strengthening domestic operations across India.' },
+  { year: '2026', title: 'Krushvel Global Exim', desc: 'Bifurcated operations into Domestic Division (Sony Crusher Engineering & Wiremesh Udyog) and Export Division (Krushvel Global Exim) to capture both national and international markets.' },
 ]
 
 const team = [
@@ -66,13 +66,13 @@ export default function About() {
               <div>
                 <h2 className="text-3xl font-bold text-slate-800 mb-6">Our Story</h2>
                 <p className="text-slate-600 mb-4">
-                  Krushvel also known as Sony Crusher Engineering and Wiremesh Udyog founded in 2010 with a vision to become a leading manufacturer of industrial crusher and conveyor parts in India. Starting with a small portfolio of crusher spare parts, we have grown to offer over 1000 products across four major categories.
+                  Our journey began in 1966 with Crushwell Engineering & Fabricator, establishing a foundation of engineering excellence. Through strategic expansion in 2010 with Jai Vinayak Enterprises and consolidation in 2017 with Sony Crusher Engineering & Wiremesh Udyog, we have grown to become a leading manufacturer of industrial crusher and conveyor parts in India.
                 </p>
                 <p className="text-slate-600 mb-4">
-                  Over the years, we have built strong relationships with domestic manufacturers and customers across India. Our team of industrial experts ensures that every product we manufacture meets the highest quality standards.
+                  Over the decades, we have built strong relationships with domestic manufacturers and customers across India. Our team of industrial experts ensures that every product we manufacture meets the highest quality standards, serving over 1000 domestic clients.
                 </p>
                 <p className="text-slate-600 mb-6">
-                  Now, we are taking the next step in our journey—expanding our reach to serve global markets. With proven manufacturing capabilities and a commitment to quality, we are ready to bring Indian engineering excellence to international buyers seeking reliable industrial components.
+                  In 2026, we strategically bifurcated our operations into two divisions: Sony Crusher Engineering & Wiremesh Udyog (Domestic Division) to deepen our national market presence, and Krushvel Global Exim (Export Division) to capture international opportunities. This marks our evolution into a globally oriented industrial enterprise.
                 </p>
               </div>
             </ScrollReveal>
@@ -80,9 +80,9 @@ export default function About() {
               <div className="relative">
                 <img src="/images/Vibrating_screen_10.jpeg" alt="Our company" className="rounded-2xl shadow-2xl w-full h-64 md:h-80 object-cover" />
                 <div className="absolute -bottom-5 -right-5 glass-card-light p-5 rounded-2xl shadow-xl max-w-xs">
-                  <div className="text-3xl font-bold text-cyan-600 mb-1">10+</div>
+                  <div className="text-3xl font-bold text-cyan-600 mb-1">60+</div>
                   <div className="text-slate-700 font-medium">Years of Manufacturing Excellence</div>
-                  <div className="text-slate-500 text-sm mt-1">Now expanding to global markets</div>
+                  <div className="text-slate-500 text-sm mt-1">Dual divisions: Domestic & Export</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -104,7 +104,7 @@ export default function About() {
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-xl font-bold text-slate-800 mb-4">Our Mission</h3>
                 <p className="text-slate-600">
-                  To leverage our proven domestic manufacturing expertise to become a trusted global supplier of industrial parts, enabling international buyers to source high-quality crusher and conveyor components with zero compromise on quality, at competitive prices, with reliable delivery.
+                  To leverage our six decades of manufacturing excellence through dual divisions: Sony Crusher Engineering & Wiremesh Udyog (Domestic) serving the Indian market with 1000+ products, and Krushvel Global Exim (Export) enabling international buyers to source high-quality crusher and conveyor components with zero compromise on quality, at competitive prices, with reliable delivery.
                 </p>
               </div>
             </ScrollReveal>
@@ -113,7 +113,7 @@ export default function About() {
                 <div className="text-4xl mb-4">🌟</div>
                 <h3 className="text-xl font-bold text-slate-800 mb-4">Our Vision</h3>
                 <p className="text-slate-600">
-                  To establish ourselves as a reliable export partner for industrial spare parts from India, helping the world's mining, construction, and material handling industries operate efficiently with Made-in-India quality components.
+                  To establish ourselves as a globally oriented industrial enterprise with two strong divisions: Sony Crusher Engineering & Wiremesh Udyog leading domestic manufacturing excellence, and Krushvel Global Exim serving as a reliable export partner, helping the world's mining, construction, and material handling industries operate efficiently with Made-in-India quality components.
                 </p>
               </div>
             </ScrollReveal>
@@ -170,7 +170,7 @@ export default function About() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-slate-800 mb-4">Our Journey</h2>
-              <p className="text-slate-600">From domestic manufacturing to global export readiness</p>
+              <p className="text-slate-600">From foundational engineering in 1966 to strategic dual-division expansion in 2026</p>
             </div>
           </ScrollReveal>
           <div className="relative">
@@ -203,18 +203,18 @@ export default function About() {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Our Export Readiness</h2>
-              <p className="text-slate-400 max-w-2xl mx-auto">We have built the capabilities and infrastructure to serve global markets with the same quality and reliability that made us successful in India.</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Our Dual Division Structure</h2>
+              <p className="text-slate-400 max-w-2xl mx-auto">We have strategically bifurcated our operations into two divisions to serve both domestic and international markets with the same quality and reliability.</p>
             </div>
           </ScrollReveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '🌍', title: 'Global Market Focus', desc: 'We are now actively targeting international markets across Africa, Middle East, Asia, Americas, Europe, and Oceania.' },
+              { icon: '🏭', title: 'Domestic Division', desc: 'Sony Crusher Engineering & Wiremesh Udyog serves the Indian market with 1000+ products, manufacturing, repairing, and strengthening national operations.' },
+              { icon: '🌍', title: 'Export Division', desc: 'Krushvel Global Exim targets international markets across Africa, Middle East, Asia, Americas, Europe, and Oceania with global supply capabilities.' },
               { icon: '📦', title: 'LCL & FCL Shipments', desc: 'Whether you need a small parcel or full container load, we handle all shipment types efficiently.' },
               { icon: '📋', title: 'Export Documentation', desc: 'Complete documentation including commercial invoice, packing list, COO, phytosanitary and more.' },
               { icon: '✅', title: 'Quality Inspection', desc: 'Pre-shipment quality inspection by our technical team ensures every product meets specifications.' },
               { icon: '🔧', title: 'Custom Packaging', desc: 'Products packed to withstand international transit with wooden crates, pallets, or boxes.' },
-              { icon: '📍', title: 'Door Delivery', desc: 'End-to-end logistics management including customs clearance and door delivery options.' },
             ].map((cap, i) => (
               <ScrollReveal key={i} delay={i * 0.1} variant="scaleUp">
                 <motion.div whileHover={{ y: -5 }} className="glass-card-dark p-6">
@@ -232,8 +232,8 @@ export default function About() {
       <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-700">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Import from India?</h2>
-            <p className="text-cyan-100 mb-8 max-w-xl mx-auto">Contact our export team to discuss your requirements and get a competitive quotation.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Partner with Us?</h2>
+            <p className="text-cyan-100 mb-8 max-w-xl mx-auto">Contact our domestic or export team to discuss your requirements and get a competitive quotation.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 bg-white text-blue-700 font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg">
                 Contact Our Team

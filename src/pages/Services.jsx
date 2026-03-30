@@ -46,10 +46,10 @@ export default function Services() {
   return (
     <>
       <SEOMeta
-        title="Export Services - Initiating Global Trade"
-        metaTitle="Export Services from India - New Exporter"
-        description="Complete export services for industrial parts from India. We are now offering sourcing, quality control, packaging and global logistics to international buyers."
-        keywords="export services India, global sourcing services, LCL FCL shipments exporter, export documentation India"
+        title="Export Services - Krushvel Global Exim"
+        metaTitle="Export Services from India - Krushvel Global Exim"
+        description="Complete export services for industrial parts from India. Krushvel Global Exim offers sourcing, quality control, packaging and global logistics to international buyers."
+        keywords="export services India, global sourcing services, LCL FCL shipments exporter, export documentation India, Krushvel Global Exim"
       />
 
       {/* Hero */}
@@ -72,7 +72,7 @@ export default function Services() {
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-teal-100 to-teal-300 bg-clip-text text-transparent mb-6">Our Export Services</h1>
               <p className="text-xl text-slate-300 mb-8">
-                Complete export services from product sourcing to door delivery. We are now ready to handle everything so you can focus on your business.
+                Complete export services from product sourcing to door delivery. Krushvel Global Exim (Export Division) is ready to handle everything so you can focus on your business.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/contact" className="btn-primary shadow-cyan-500/30 hover:shadow-cyan-500/50">Request Export Support</Link>
@@ -156,13 +156,13 @@ export default function Services() {
             <ScrollReveal>
               <h2 className="text-2xl font-bold text-slate-800 mb-6">Export Services from India</h2>
               <p className="text-slate-600 mb-4">
-                Krushvel provides comprehensive <strong>export services from India</strong> specializing in industrial crusher and conveyor parts. Our global sourcing services cover over 1000 industrial products from trusted Indian manufacturers.
+                Krushvel Global Exim provides comprehensive <strong>export services from India</strong> specializing in industrial crusher and conveyor parts. Our global sourcing services cover over 1000 industrial products from trusted Indian manufacturers, including our own domestic division, Sony Crusher Engineering & Wiremesh Udyog.
               </p>
               <p className="text-slate-600 mb-4">
                 We offer both <strong>LCL FCL shipments</strong> to accommodate buyers of all sizes – from individual importers ordering small quantities to large industrial companies requiring full container loads. Our freight team negotiates the best rates for sea and air freight.
               </p>
               <p className="text-slate-600">
-                Our complete service package includes export documentation preparation, pre-shipment quality inspection, professional packaging, and end-to-end logistics coordination. As we initiate our export operations, we are committed to providing seamless support for international buyers.
+                Our complete service package includes export documentation preparation, pre-shipment quality inspection, professional packaging, and end-to-end logistics coordination. As part of the Krushvel group with dual divisions, we are committed to providing seamless support for international buyers.
               </p>
             </ScrollReveal>
           </div>
@@ -174,7 +174,7 @@ export default function Services() {
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Importing from India?</h2>
-            <p className="text-teal-100 mb-8 max-w-xl mx-auto">Contact our export team today and we'll guide you through the entire import process as we begin our export journey.</p>
+            <p className="text-teal-100 mb-8 max-w-xl mx-auto">Contact our export team (Krushvel Global Exim) today and we'll guide you through the entire import process.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 bg-white text-teal-700 font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg">
                 Request Export Support

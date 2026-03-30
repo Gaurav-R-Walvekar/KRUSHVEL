@@ -15,16 +15,16 @@ export default function GlobalMarkets() {
   return (
     <>
       <SEOMeta
-        title="Global Markets We Target"
-        metaTitle="Target Global Markets for Industrial Parts Export"
-        description="Krushvel is expanding to export crusher parts and conveyor components to global markets across Africa, Middle East, Asia, Americas, Europe, and Oceania."
-        keywords="industrial parts export markets, crusher parts global buyer, conveyor rollers worldwide supply from India"
+        title="Global Markets We Target - Krushvel Global Exim"
+        metaTitle="Target Global Markets for Industrial Parts Export - Krushvel Global Exim"
+        description="Krushvel Global Exim (Export Division) targets global markets for crusher parts and conveyor components across Africa, Middle East, Asia, Americas, Europe, and Oceania."
+        keywords="industrial parts export markets, crusher parts global buyer, conveyor rollers worldwide supply from India, Krushvel Global Exim"
       />
       <section className="relative pt-28 pb-16 bg-slate-900">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Global Markets We Target</h1>
-            <p className="text-xl text-slate-300 max-w-2xl">Expanding our reach to serve industrial buyers across 6 continents</p>
+            <p className="text-xl text-slate-300 max-w-2xl">Krushvel Global Exim (Export Division) targets industrial buyers across 6 continents</p>
           </ScrollReveal>
         </div>
       </section>

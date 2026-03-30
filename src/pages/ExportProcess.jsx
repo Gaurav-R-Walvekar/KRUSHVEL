@@ -6,16 +6,16 @@ export default function ExportProcess() {
   return (
     <>
       <SEOMeta
-        title="Our Export Process"
-        metaTitle="Export Process - Industrial Parts from India"
-        description="Learn about our streamlined export process for industrial parts from India to global buyers. We guide you through every step from inquiry to delivery."
-        keywords="export process industrial parts India, how to import crusher parts India, export documentation India"
+        title="Our Export Process - Krushvel Global Exim"
+        metaTitle="Export Process - Industrial Parts from India - Krushvel Global Exim"
+        description="Learn about our streamlined export process for industrial parts from India to global buyers. Krushvel Global Exim guides you through every step from inquiry to delivery."
+        keywords="export process industrial parts India, how to import crusher parts India, export documentation India, Krushvel Global Exim"
       />
       <section className="relative pt-28 pb-16 bg-slate-900">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Export Process</h1>
-            <p className="text-xl text-slate-300 max-w-2xl">Simple, transparent, and efficient export process from inquiry to delivery. We guide you through every step as we begin our export journey.</p>
+            <p className="text-xl text-slate-300 max-w-2xl">Simple, transparent, and efficient export process from inquiry to delivery. Krushvel Global Exim guides you through every step.</p>
           </ScrollReveal>
         </div>
       </section>
