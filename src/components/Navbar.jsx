@@ -99,6 +99,7 @@ export default function Navbar() {
   const [languageOpen, setLanguageOpen] = useState(false)
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0])
   const [translateReady, setTranslateReady] = useState(false)
+  const [isTranslating, setIsTranslating] = useState(false)
   const location = useLocation()
   const languageRef = useRef(null)
 
@@ -142,39 +143,11 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  // Reset to English on page load/refresh
-  useEffect(() => {
-    const resetToEnglish = () => {
-      // Clear Google Translate cookies and force reload
-      const cookies = document.cookie.split(';')
-      for (let cookie of cookies) {
-        if (cookie.includes('googtrans') || cookie.includes('googTe')) {
-          document.cookie = cookie.split('=')[0] + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-        }
-      }
-      
-      // Remove any existing translation
-      const select = document.querySelector('.goog-te-combo')
-      if (select) {
-        select.value = 'en'
-        select.dispatchEvent(new Event('change', { bubbles: true }))
-      }
-      setSelectedLanguage(languages[0])
-    }
-    
-    // Wait for Google Translate to load, then reset
-    const timer = setTimeout(() => {
-      resetToEnglish()
-    }, 1000)
-    
-    // Also try immediately in case Google Translate is already loaded
-    resetToEnglish()
-    
-    return () => clearTimeout(timer)
-  }, [])
+
 
   const handleLanguageSelect = (lang, isMobile = false) => {
     setSelectedLanguage(lang)
+    setIsTranslating(true)
     
     // Function to trigger Google Translate
     const triggerTranslate = () => {
@@ -204,17 +177,95 @@ export default function Navbar() {
     } else {
       setTimeout(() => setLanguageOpen(false), 100)
     }
+    
+    // Hide loader after translation completes (estimated time)
+    setTimeout(() => setIsTranslating(false), 2000)
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-cyan-100/50 py-2' : 'bg-transparent py-4'}`}>
+    <>
+      {/* Translation Loader Overlay */}
+      <AnimatePresence>
+        {isTranslating && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm flex items-center justify-center"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="bg-white rounded-2xl p-8 shadow-2xl flex flex-col items-center gap-6"
+            >
+              {/* Outer rotating ring */}
+              <div className="relative w-16 h-16">
+                <div 
+                  className="absolute inset-0 border-4 border-cyan-200 rounded-full"
+                  style={{
+                    animation: 'spin 2s linear infinite !important'
+                  }}
+                ></div>
+                <div 
+                  className="absolute inset-2 border-4 border-t-cyan-500 border-r-transparent border-b-transparent border-l-transparent rounded-full"
+                  style={{
+                    animation: 'spin 1.5s linear infinite reverse !important'
+                  }}
+                ></div>
+                <div 
+                  className="absolute inset-4 border-4 border-t-blue-500 border-r-transparent border-b-transparent border-l-transparent rounded-full"
+                  style={{
+                    animation: 'spin 1s linear infinite !important'
+                  }}
+                ></div>
+                {/* Center pulsing dot */}
+                <div 
+                  className="absolute inset-0 flex items-center justify-center"
+                >
+                  <div 
+                    className="w-3 h-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
+                    style={{
+                      animation: 'pulse 1s ease-in-out infinite !important'
+                    }}
+                  ></div>
+                </div>
+              </div>
+              {/* Text with gradient */}
+              <div className="flex flex-col items-center gap-1">
+                <p 
+                  className="text-lg font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent"
+                  style={{
+                    animation: 'pulse 2s ease-in-out infinite !important'
+                  }}
+                >
+                  Translating
+                </p>
+                <div className="flex gap-1">
+                  {[0, 1, 2].map((i) => (
+                    <div
+                      key={i}
+                      className="w-1.5 h-1.5 bg-cyan-500 rounded-full"
+                      style={{
+                        animation: `bounce 1.4s ease-in-out infinite ${i * 0.16}s !important`
+                      }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-cyan-100/50 py-2' : 'bg-transparent py-4'}`}>
       <nav className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <motion.img 
             src="/images/KRUSHVEL_logo.jpg" 
             alt="Krushvel Logo" 
-            className="h-14 w-14 rounded-full border-2 border-cyan-400 object-cover"
+            className="h-14 w-14 rounded-full object-cover"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -561,5 +612,6 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </header>
+    </>
   )
 }
