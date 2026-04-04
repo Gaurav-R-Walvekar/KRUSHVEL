@@ -78,7 +78,7 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal variant="fadeRight">
               <div className="relative">
-                <img src="/images/AK_PIC2.jpeg" alt="Our company" className="rounded-2xl shadow-2xl w-full h-64 md:h-80 object-cover" />
+                <img src="/images/GroupPic.jpeg" alt="Our company" className="rounded-2xl shadow-2xl w-full h-64 md:h-80 object-cover" />
                 <div className="absolute -bottom-5 -right-5 glass-card-light p-5 rounded-2xl shadow-xl max-w-xs">
                   <div className="text-3xl font-bold text-cyan-600 mb-1">60+</div>
                   <div className="text-slate-700 font-medium">Years of Manufacturing Excellence</div>
